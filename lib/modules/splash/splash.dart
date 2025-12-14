@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
+
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -12,7 +15,7 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 2));
+    Future.delayed(Duration(milliseconds: 1500),() => Get.offAllNamed(AppPages.login),);
   
     super.initState();
   }
