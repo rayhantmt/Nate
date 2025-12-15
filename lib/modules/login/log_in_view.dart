@@ -126,6 +126,9 @@ Widget _loginView(){
         ),
         ),
         SizedBox(height: Get.height*0.02,width: double.infinity,),
+        Text('Sign in to access your projects, manage measurements, and generate accurate quotes',
+        style: GoogleFonts.roboto( fontWeight: FontWeight.w400,fontSize: 12,color: Colors.white.withOpacity(0.8)),
+        )
       ],
     ),
   );
