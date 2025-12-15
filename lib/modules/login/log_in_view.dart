@@ -25,18 +25,32 @@ class LogInView extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 20,right: 20),
-                  child: Column(children: [SizedBox(height: Get.height * 0.02),
-                  Container(
-                    height: Get.height*0.07,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Color(0xffFFFFFF).withOpacity(.1),
-                      borderRadius: BorderRadius.circular(12)
-                    ),
-                  )
-                  
-                  ]),
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: Column(
+                    children: [
+                      SizedBox(height: Get.height * 0.02),
+                      Container(
+                        height: Get.height * 0.07,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Color(0xffFFFFFF).withOpacity(.1),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Container(height: Get.height * 0.07,   child: Center(
+                                child: Text('Log In',style :TextStyle(
+                                  color: Colors.white
+                                ),),
+                              ),),
+                            ),
+                            
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
