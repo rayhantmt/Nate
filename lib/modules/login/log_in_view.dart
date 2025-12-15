@@ -43,27 +43,39 @@ class LogInView extends GetView<LogInController> {
                             GestureDetector(
                               onTap: () => controller.setlogintype(0),
                               child: Expanded(
-                                child: Container(height: Get.height * 0.07,   child: Center(
-                                  child: Text('Log In',style :GoogleFonts.roboto(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14
-                                  ),),
-                                ),),
+                                child: Container(
+                                  height: Get.height * 0.07,
+                                  child: Center(
+                                    child: Text(
+                                      'Log In',
+                                      style: GoogleFonts.roboto(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
-                             GestureDetector(
+                            GestureDetector(
                               onTap: () => controller.setlogintype(1),
-                               child: Expanded(
-                                child: Container(height: Get.height * 0.07,   child: Center(
-                                  child: Text('Sign Up',style :GoogleFonts.roboto(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14
-                                  ),),
-                                ),),
-                                                           ),
-                             ),
+                              child: Expanded(
+                                child: Container(
+                                  height: Get.height * 0.07,
+                                  child: Center(
+                                    child: Text(
+                                      'Sign Up',
+                                      style: GoogleFonts.roboto(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
