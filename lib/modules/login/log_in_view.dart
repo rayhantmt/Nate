@@ -115,8 +115,17 @@ class LogInView extends GetView<LogInController> {
 Widget _loginView(){
   return SingleChildScrollView(
     child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Log in ')
+        SizedBox(height: Get.height*0.02,width: double.infinity,),
+        Text('Hi, Welcome back!',
+        style: GoogleFonts.roboto( fontWeight: FontWeight.w700,
+        fontSize: 24,
+        color: Colors.white
+        ),
+        ),
+        SizedBox(height: Get.height*0.02,width: double.infinity,),
       ],
     ),
   );
