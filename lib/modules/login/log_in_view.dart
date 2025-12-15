@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/modules/login/log_in_controller.dart';
 import 'package:nate/utils/app_images.dart';
 
-class LogInView extends StatelessWidget {
+class LogInView extends GetView<LogInController> {
   const LogInView({super.key});
 
   @override
@@ -39,14 +40,19 @@ class LogInView extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
-                            Expanded(
-                              child: Container(height: Get.height * 0.07,   child: Center(
-                                child: Text('Log In',style :GoogleFonts.roboto(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14
+                            GestureDetector(
+                              onTap: () {
+                                
+                              },
+                              child: Expanded(
+                                child: Container(height: Get.height * 0.07,   child: Center(
+                                  child: Text('Log In',style :GoogleFonts.roboto(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14
+                                  ),),
                                 ),),
-                              ),),
+                              ),
                             ),
                              Expanded(
                               child: Container(height: Get.height * 0.07,   child: Center(
