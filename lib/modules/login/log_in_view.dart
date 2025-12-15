@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nate/utils/app_images.dart';
 
 class LogInView extends StatelessWidget {
@@ -25,7 +26,7 @@ class LogInView extends StatelessWidget {
             ),
             child: Column(
               children: [
-
+SizedBox(height: Get.height*0.1,)
               ],
             ),
           ))
