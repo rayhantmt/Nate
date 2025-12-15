@@ -95,6 +95,12 @@ class LogInView extends GetView<LogInController> {
                           ],
                         ),
                       ),
+                      Expanded(child: Obx(() {
+                        if (controller.logintype.value==0){
+                        return _loginView();}
+                        else{
+                        return _signUpView();}
+                      },))
                     ],
                   ),
                 ),
@@ -105,4 +111,22 @@ class LogInView extends GetView<LogInController> {
       ),
     );
   }
+}
+Widget _loginView(){
+  return SingleChildScrollView(
+    child: Column(
+      children: [
+        Text('Log in ')
+      ],
+    ),
+  );
+}
+Widget _signUpView(){
+  return SingleChildScrollView(
+    child: Column(
+      children: [
+        Text('sing up ')
+      ],
+    ),
+  );
 }
