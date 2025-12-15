@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/utils/app_images.dart';
 
 class LogInView extends StatelessWidget {
@@ -40,12 +41,22 @@ class LogInView extends StatelessWidget {
                           children: [
                             Expanded(
                               child: Container(height: Get.height * 0.07,   child: Center(
-                                child: Text('Log In',style :TextStyle(
-                                  color: Colors.white
+                                child: Text('Log In',style :GoogleFonts.roboto(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14
                                 ),),
                               ),),
                             ),
-                            
+                             Expanded(
+                              child: Container(height: Get.height * 0.07,   child: Center(
+                                child: Text('Sign Up',style :GoogleFonts.roboto(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14
+                                ),),
+                              ),),
+                            ),
                           ],
                         ),
                       ),
