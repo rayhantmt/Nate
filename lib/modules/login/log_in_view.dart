@@ -11,7 +11,24 @@ class LogInView extends StatelessWidget {
     body: SafeArea(
       child: Column(
         children: [
-          Image.asset(AppImages.login)
+          Image.asset(AppImages.login),
+          Expanded(child: Container(
+            height: double.infinity,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(15),
+                topRight: Radius.circular(15),
+                
+              )
+            ),
+            child: Column(
+              children: [
+
+              ],
+            ),
+          ))
         ],
       ),
     ),
