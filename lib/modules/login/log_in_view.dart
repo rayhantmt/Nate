@@ -51,7 +51,8 @@ class LogInView extends GetView<LogInController> {
                                   decoration: BoxDecoration(
                                     border: Border.all(
                                       color:controller.logintype.value==0? Color(0xffFFFFFF).withOpacity(0.5):Colors.transparent
-                                    )
+                                    ),
+                                    borderRadius: BorderRadius.circular(12)
                                   ),
                                   child: Center(
                                     child: Text(
@@ -75,7 +76,8 @@ class LogInView extends GetView<LogInController> {
                                   decoration: BoxDecoration(
                                     border: Border.all(
                                       color:controller.logintype.value==1? Color(0xffFFFFFF).withOpacity(0.5):Colors.transparent
-                                    )
+                                    ),
+                                    borderRadius: BorderRadius.circular(12)
                                   ),
                                   child: Center(
                                     child: Text(
