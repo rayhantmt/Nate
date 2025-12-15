@@ -24,7 +24,20 @@ class LogInView extends StatelessWidget {
                     topRight: Radius.circular(15),
                   ),
                 ),
-                child: Column(children: [SizedBox(height: Get.height * 0.1)]),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20,right: 20),
+                  child: Column(children: [SizedBox(height: Get.height * 0.02),
+                  Container(
+                    height: Get.height*0.07,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFFFFFF).withOpacity(.1),
+                      borderRadius: BorderRadius.circular(12)
+                    ),
+                  )
+                  
+                  ]),
+                ),
               ),
             ),
           ],
