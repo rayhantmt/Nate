@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Commontextfield extends StatelessWidget {
-  const Commontextfield({super.key, required this.tittle, required this.hint});
+  const Commontextfield({super.key, required this.tittle, required this.hint,this.obsecuretext});
 final String tittle;
 final String hint;
-
+final bool? obsecuretext;
   @override
   Widget build(BuildContext context) {
     return Column(
