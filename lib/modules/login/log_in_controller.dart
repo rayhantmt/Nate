@@ -5,4 +5,8 @@ class LogInController extends GetxController{
 void setlogintype(int type){
 logintype.value=type;
 }
+var obsecuretext=false.obs;
+ void toggoleObsecue(){
+  obsecuretext.value=!obsecuretext.value;
+ }
 }
