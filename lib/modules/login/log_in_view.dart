@@ -156,7 +156,9 @@ Widget _loginView() {
           ),
         ),
          SizedBox(height: Get.height * 0.02, width: double.infinity),
-         Commontextfield(tittle: 'Email', hint: 'Your email')
+         Commontextfield(tittle: 'Email', hint: 'Your email'),
+          SizedBox(height: Get.height * 0.02, width: double.infinity),
+          Commontextfield(tittle: 'Password', hint: 'pass')
       ],
     ),
   );
