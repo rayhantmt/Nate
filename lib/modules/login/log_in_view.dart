@@ -128,6 +128,7 @@ class LogInView extends GetView<LogInController> {
 }
 
 Widget _loginView() {
+  final controller=Get.find<LogInController>();
   return SingleChildScrollView(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -154,7 +155,7 @@ Widget _loginView() {
          SizedBox(height: Get.height * 0.02, width: double.infinity),
          Commontextfield(tittle: 'Email', hint: 'Your email'),
           SizedBox(height: Get.height * 0.02, width: double.infinity),
-          Commontextfield(tittle: 'Password', hint: '********')
+          Obx(() => Commontextfield(tittle: 'Password', hint: '********',obsecuretext: controller.obsecuretext.value,suffix: GestureDetector( onTap: () => controller.toggoleObsecue(),    child: Icon(controller.obsecuretext.value?Icons.visibility:Icons.visibility_off)),),)
       ],
     ),
   );
