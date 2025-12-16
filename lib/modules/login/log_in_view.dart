@@ -46,29 +46,27 @@ class LogInView extends GetView<LogInController> {
                             GestureDetector(
                               onTap: () => controller.setlogintype(0),
                               child: Obx(
-                                () => Expanded(
-                                  child: Container(
-                                    height: Get.height * 0.07,
-                                    width: Get.width * 0.4,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: controller.logintype.value == 0
-                                            ? Color(0xffFFFFFF).withOpacity(0.5)
-                                            : Colors.transparent,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12),
+                                () => Container(
+                                  height: Get.height * 0.07,
+                                  width: Get.width * 0.4,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: controller.logintype.value == 0
+                                          ? Color(0xffFFFFFF).withOpacity(0.5)
+                                          : Colors.transparent,
                                     ),
-                                    child: Center(
-                                      child: Text(
-                                        'Log In',
-                                        style: GoogleFonts.roboto(
-                                          color: Colors.white,
-                                          fontWeight:
-                                              controller.logintype.value == 0
-                                              ? FontWeight.w700
-                                              : FontWeight.w400,
-                                          fontSize: 14,
-                                        ),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Log In',
+                                      style: GoogleFonts.roboto(
+                                        color: Colors.white,
+                                        fontWeight:
+                                            controller.logintype.value == 0
+                                            ? FontWeight.w700
+                                            : FontWeight.w400,
+                                        fontSize: 14,
                                       ),
                                     ),
                                   ),
@@ -78,29 +76,27 @@ class LogInView extends GetView<LogInController> {
                             GestureDetector(
                               onTap: () => controller.setlogintype(1),
                               child: Obx(
-                                () => Expanded(
-                                  child: Container(
-                                    height: Get.height * 0.07,
-                                    width: Get.width * 0.4,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: controller.logintype.value == 1
-                                            ? Color(0xffFFFFFF).withOpacity(0.5)
-                                            : Colors.transparent,
-                                      ),
-                                      borderRadius: BorderRadius.circular(12),
+                                () => Container(
+                                  height: Get.height * 0.07,
+                                  width: Get.width * 0.4,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: controller.logintype.value == 1
+                                          ? Color(0xffFFFFFF).withOpacity(0.5)
+                                          : Colors.transparent,
                                     ),
-                                    child: Center(
-                                      child: Text(
-                                        'Sign Up',
-                                        style: GoogleFonts.roboto(
-                                          color: Colors.white,
-                                          fontWeight:
-                                              controller.logintype.value == 1
-                                              ? FontWeight.w700
-                                              : FontWeight.w400,
-                                          fontSize: 14,
-                                        ),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Sign Up',
+                                      style: GoogleFonts.roboto(
+                                        color: Colors.white,
+                                        fontWeight:
+                                            controller.logintype.value == 1
+                                            ? FontWeight.w700
+                                            : FontWeight.w400,
+                                        fontSize: 14,
                                       ),
                                     ),
                                   ),
