@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/common_widgets/textfield.dart';
 import 'package:nate/utils/app_images.dart';
 
@@ -53,7 +54,8 @@ class ForgorPasswordView extends StatelessWidget {
                 ),
                 ),
                 SizedBox(height: Get.height*0.02,),
-                Commontextfield(tittle: 'Email', hint: 'Your email', obsecuretext: false)
+                Commontextfield(tittle: 'Email', hint: 'Your email', obsecuretext: false),
+                CommonButton(tittle: 'Send conde')
               ],
             ),
           ),
