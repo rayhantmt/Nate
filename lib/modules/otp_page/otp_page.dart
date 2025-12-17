@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/modules/otp_page/otp_page_controller.dart';
 import 'package:nate/utils/app_images.dart';
 
-class OtpPageView extends StatelessWidget {
+class OtpPageView extends GetView<OtpController> {
   const OtpPageView({super.key});
 
   @override
@@ -30,7 +32,53 @@ class OtpPageView extends StatelessWidget {
                     ),
                     )
                   ],
-                )
+                ),
+
+
+
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: List.generate(6, (index) {
+                    return SizedBox(
+                      width: 40,
+                      child: TextField(
+                        controller: controller.otpControllers[index],
+                        focusNode: controller.otpFocusNodes[index],
+                        keyboardType: TextInputType.number,
+                        maxLength: 1,
+                        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        decoration: const InputDecoration(
+                          counterText: '',
+                          border: UnderlineInputBorder(),
+                        ),
+                        onChanged: (value) {
+                          controller.onOtpFieldChanged(value, index);
+                        },
+                      ),
+                    );
+                  }),
+                ),
+                const SizedBox(height: 16),
+                Obx(() => GestureDetector(
+                      onTap: controller.secondsRemaining.value == 0
+                          ? controller.resendCode
+                          : null,
+                      child: Text(
+                        controller.secondsRemaining.value == 0
+                            ? "Resend code"
+                            : "Resend code ${controller.secondsRemaining}s",
+                        style: TextStyle(
+                          color: controller.secondsRemaining.value == 0
+                              ? const Color(0xFF1B1E28)
+                              : const Color(0xFF7D848D),
+                        ),
+                      ),
+                    )),
               ],
             ),
           ),
