@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/common_widgets/textfield.dart';
 import 'package:nate/modules/login/log_in_controller.dart';
 import 'package:nate/utils/app_images.dart';
@@ -207,11 +208,23 @@ Widget _loginView() {
             ),
           ],
         ),
+        SizedBox(height: Get.height*0.02,),
+        CommonButton(tittle: 'Log In')
       ],
     ),
   );
 }
 
 Widget _signUpView() {
-  return SingleChildScrollView(child: Column(children: [Text('sing up ')]));
+  return SingleChildScrollView(child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      SizedBox(height: Get.height*0.02,width: double.infinity,),
+      Text('Create New Acocunt',
+  style: GoogleFonts.roboto( 
+    fontWeight: FontWeight.w700,
+    color: Colors.white,
+    fontSize: 20
+  ),
+  )]));
 }
