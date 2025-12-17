@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/common_widgets/textfield.dart';
 import 'package:nate/modules/login/log_in_controller.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
+import 'package:nate/utils/app_routes.dart';
 
 class LogInView extends GetView<LogInController> {
   const LogInView({super.key});
@@ -193,12 +195,15 @@ Widget _loginView() {
               ),
             ),
             Expanded(child: SizedBox()),
-            Text(
-              'Forgot Password ?',
-              style: GoogleFonts.roboto(
-                color: Color(0xffEC1B34),
-                fontWeight: FontWeight.w600,
-                fontSize: 12,
+            GestureDetector(
+              onTap: () => Get.toNamed(AppPages.forgotpassword),
+              child: Text(
+                'Forgot Password ?',
+                style: GoogleFonts.roboto(
+                  color: Color(0xffEC1B34),
+                  fontWeight: FontWeight.w600,
+                  fontSize: 12,
+                ),
               ),
             ),
           ],
