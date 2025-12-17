@@ -27,6 +27,7 @@ final Widget? suffix;
             borderRadius: BorderRadius.circular(12)
           ),
           child: TextFormField(
+          style: GoogleFonts.roboto( color: Colors.white),
             obscureText: obsecuretext,
             decoration: InputDecoration(
               border: InputBorder.none,
