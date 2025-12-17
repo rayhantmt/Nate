@@ -166,7 +166,7 @@ Widget _loginView() {
                 controller.obsecuretext.value
                     ? Icons.visibility
                     : Icons.visibility_off,
-                color: Colors.red,
+                color: Colors.white.withOpacity(0.8),
               ),
             ),
           ),

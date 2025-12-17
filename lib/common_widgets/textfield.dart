@@ -26,21 +26,24 @@ final Widget? suffix;
             ),
             borderRadius: BorderRadius.circular(12)
           ),
-          child: TextFormField(
-          style: GoogleFonts.roboto( color: Colors.white),
-            obscureText: obsecuretext,
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              suffix: suffix,
-              hint: Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Text(hint,
-                style: GoogleFonts.roboto( fontWeight: FontWeight.w400,fontSize: 12,
-                color: Colors.white.withOpacity(0.6)
-                ),
-                ),
-                
-              )
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: TextFormField(
+            style: GoogleFonts.roboto( color: Colors.white),
+              obscureText: obsecuretext,
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                suffix: suffix,
+                hint: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(hint,
+                  style: GoogleFonts.roboto( fontWeight: FontWeight.w400,fontSize: 12,
+                  color: Colors.white.withOpacity(0.6)
+                  ),
+                  ),
+                  
+                )
+              ),
             ),
           ),
         ),
