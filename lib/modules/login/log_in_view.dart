@@ -128,7 +128,7 @@ class LogInView extends GetView<LogInController> {
 }
 
 Widget _loginView() {
-  final controller=Get.find<LogInController>();
+  final controller = Get.find<LogInController>();
   return SingleChildScrollView(
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -152,10 +152,25 @@ Widget _loginView() {
             color: Colors.white.withOpacity(0.8),
           ),
         ),
-         SizedBox(height: Get.height * 0.02, width: double.infinity),
-         Commontextfield(tittle: 'Email', hint: 'Your email'),
-          SizedBox(height: Get.height * 0.02, width: double.infinity),
-          Obx(() => Commontextfield(tittle: 'Password', hint: '********',obsecuretext: controller.obsecuretext.value,suffix: GestureDetector( onTap: () => controller.toggoleObsecue(),    child: Icon(controller.obsecuretext.value?Icons.visibility:Icons.visibility_off)),),)
+        SizedBox(height: Get.height * 0.02, width: double.infinity),
+        Commontextfield(tittle: 'Email', hint: 'Your email',obsecuretext: false,),
+        SizedBox(height: Get.height * 0.02, width: double.infinity),
+        Obx(
+          () => Commontextfield(
+            tittle: 'Password',
+            hint: '********',
+            obsecuretext: controller.obsecuretext.value,
+            suffix: GestureDetector(
+              onTap: () => controller.toggoleObsecue(),
+              child: Icon(
+                controller.obsecuretext.value
+                    ? Icons.visibility
+                    : Icons.visibility_off,
+                color: Colors.red,
+              ),
+            ),
+          ),
+        ),
       ],
     ),
   );

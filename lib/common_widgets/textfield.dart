@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Commontextfield extends StatelessWidget {
-  const Commontextfield({super.key, required this.tittle, required this.hint,this.obsecuretext,this.suffix});
+  const Commontextfield({super.key, required this.tittle, required this.hint,required this.obsecuretext,this.suffix});
 final String tittle;
 final String hint;
-final bool? obsecuretext;
+final bool obsecuretext;
 final Widget? suffix;
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ final Widget? suffix;
             borderRadius: BorderRadius.circular(12)
           ),
           child: TextFormField(
+            obscureText: obsecuretext,
             decoration: InputDecoration(
               border: InputBorder.none,
               suffix: suffix,
