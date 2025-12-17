@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/common_widgets/textfield.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
 
 class ForgorPasswordView extends StatelessWidget {
   const ForgorPasswordView({super.key});
@@ -56,7 +57,9 @@ class ForgorPasswordView extends StatelessWidget {
                 SizedBox(height: Get.height*0.02,),
                 Commontextfield(tittle: 'Email', hint: 'Your email', obsecuretext: false),
                 SizedBox(height: Get.height*0.02,),
-                CommonButton(tittle: 'Send code')
+                GestureDetector(
+                  onTap: () => Get.toNamed(AppPages.otppage),
+                  child: CommonButton(tittle: 'Send code'))
               ],
             ),
           ),
