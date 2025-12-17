@@ -272,6 +272,20 @@ Widget _signUpView() {
               color: Colors.white.withOpacity(0.8),
             ),
           ),
+        ),),
+          Obx(() =>  Commontextfield(
+          tittle: 'Confirmed Password',
+          hint: "**********",
+          obsecuretext: controller.signuppass1.value,
+          suffix: GestureDetector(
+            onTap: () => controller.toggoleObsecue2(),
+            child: Icon(
+              controller.signuppass1.value
+                  ? Icons.visibility
+                  : Icons.visibility_off,
+              color: Colors.white.withOpacity(0.8),
+            ),
+          ),
         ),)
       ],
     ),
