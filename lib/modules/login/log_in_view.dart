@@ -286,7 +286,8 @@ Widget _signUpView() {
               color: Colors.white.withOpacity(0.8),
             ),
           ),
-        ),)
+        ),),
+        CommonButton(tittle: 'Verify Email')
       ],
     ),
   );
