@@ -238,27 +238,27 @@ Widget _signUpView() {
             color: Colors.white.withOpacity(0.8),
             fontSize: 12,
           ),
-        ),
+        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
         Commontextfield(
           tittle: 'First Name',
           hint: 'Enter your first name',
           obsecuretext: false,
-        ),
+        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
         Commontextfield(
           tittle: 'Last Name',
           hint: 'Enter your last name',
           obsecuretext: false,
-        ),
+        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
         Commontextfield(
           tittle: 'Email Address',
           hint: 'Enter your email address',
           obsecuretext: false,
-        ),
+        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
         Commontextfield(
           tittle: 'Contact Number',
           hint: 'Enter your contact number ',
           obsecuretext: false,
-        ),
+        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
        Obx(() =>  Commontextfield(
           tittle: 'Password',
           hint: "**********",
@@ -272,7 +272,7 @@ Widget _signUpView() {
               color: Colors.white.withOpacity(0.8),
             ),
           ),
-        ),),
+        ),),SizedBox(height: Get.height * 0.01, width: double.infinity),
           Obx(() =>  Commontextfield(
           tittle: 'Confirmed Password',
           hint: "**********",
@@ -286,7 +286,7 @@ Widget _signUpView() {
               color: Colors.white.withOpacity(0.8),
             ),
           ),
-        ),),
+        ),),SizedBox(height: Get.height * 0.01, width: double.infinity),
         CommonButton(tittle: 'Verify Email')
       ],
     ),
