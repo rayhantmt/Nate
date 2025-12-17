@@ -153,7 +153,11 @@ Widget _loginView() {
           ),
         ),
         SizedBox(height: Get.height * 0.02, width: double.infinity),
-        Commontextfield(tittle: 'Email', hint: 'Your email',obsecuretext: false,),
+        Commontextfield(
+          tittle: 'Email',
+          hint: 'Your email',
+          obsecuretext: false,
+        ),
         SizedBox(height: Get.height * 0.02, width: double.infinity),
         Obx(
           () => Commontextfield(
@@ -172,9 +176,33 @@ Widget _loginView() {
           ),
         ),
         SizedBox(height: Get.height * 0.02, width: double.infinity),
-       Row( children: [
-        Checkbox(value: controller.Checkbox.value, onChanged: controller.clickCheckbox,shape: CircleBorder(),)
-       ],)
+        Row(
+          children: [
+            Checkbox(
+              activeColor: Colors.red,
+              value: controller.Checkbox.value,
+              onChanged: controller.clickCheckbox,
+              shape: CircleBorder(),
+            ),
+            Text(
+              'Remember Me',
+              style: GoogleFonts.roboto(
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                fontSize: 14,
+              ),
+            ),
+            Expanded(child: SizedBox()),
+            Text(
+              'Forgot Password ?',
+              style: GoogleFonts.roboto(
+                color: Color(0xffEC1B34),
+                fontWeight: FontWeight.w600,
+                fontSize: 12,
+              ),
+            ),
+          ],
+        ),
       ],
     ),
   );
