@@ -5,7 +5,6 @@ import 'package:nate/common_widgets/textfield.dart';
 import 'package:nate/modules/login/log_in_controller.dart';
 import 'package:nate/utils/app_images.dart';
 import 'package:nate/utils/app_pages.dart';
-import 'package:nate/utils/app_routes.dart';
 
 class LogInView extends GetView<LogInController> {
   const LogInView({super.key});
