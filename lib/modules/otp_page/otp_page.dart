@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/modules/otp_page/otp_page_controller.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
 
 class OtpPageView extends GetView<OtpController> {
   const OtpPageView({super.key});
@@ -96,7 +97,9 @@ style: GoogleFonts.roboto(
                         ),
                       ),
                     )),
-                    CommonButton(tittle: 'Verify')
+                    GestureDetector(
+                      onTap: () => Get.toNamed(AppPages.resetpass),
+                      child: CommonButton(tittle: 'Verify'))
               ],
             ),
           ),
