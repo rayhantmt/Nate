@@ -171,6 +171,10 @@ Widget _loginView() {
             ),
           ),
         ),
+        SizedBox(height: Get.height * 0.02, width: double.infinity),
+       Row( children: [
+        Checkbox(value: controller.Checkbox.value, onChanged: controller.clickCheckbox,shape: CircleBorder(),)
+       ],)
       ],
     ),
   );

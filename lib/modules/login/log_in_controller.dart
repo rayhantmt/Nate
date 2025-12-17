@@ -9,4 +9,8 @@ logintype.value=type;
  void toggoleObsecue(){
   obsecuretext.value=!obsecuretext.value;
  }
+ RxBool Checkbox=false.obs;
+ void clickCheckbox(val){
+  Checkbox.value=val;
+ }
 }
