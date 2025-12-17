@@ -208,23 +208,39 @@ Widget _loginView() {
             ),
           ],
         ),
-        SizedBox(height: Get.height*0.02,),
-        CommonButton(tittle: 'Log In')
+        SizedBox(height: Get.height * 0.02),
+        CommonButton(tittle: 'Log In'),
       ],
     ),
   );
 }
 
 Widget _signUpView() {
-  return SingleChildScrollView(child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      SizedBox(height: Get.height*0.02,width: double.infinity,),
-      Text('Create New Acocunt',
-  style: GoogleFonts.roboto( 
-    fontWeight: FontWeight.w700,
-    color: Colors.white,
-    fontSize: 20
-  ),
-  )]));
+  return SingleChildScrollView(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: Get.height * 0.02, width: double.infinity),
+        Text(
+          'Create New Acocunt',
+          style: GoogleFonts.roboto(
+            fontWeight: FontWeight.w700,
+            color: Colors.white,
+            fontSize: 20,
+          ),
+        ),
+        SizedBox(height: Get.height * 0.01, width: double.infinity),
+        Text('Please fill in your contact information',
+        style: GoogleFonts.roboto( 
+          fontWeight: FontWeight.w400,
+          color: Colors.white.withOpacity(0.8),
+          fontSize: 12
+        ),
+        ),
+        Commontextfield(tittle: 'First Name', hint: 'Enter your first name', obsecuretext: false),
+        Commontextfield(tittle: 'Last Name', hint: 'Enter your last name', obsecuretext: false),
+        
+      ],
+    ),
+  );
 }
