@@ -55,7 +55,8 @@ class ForgorPasswordView extends StatelessWidget {
                 ),
                 SizedBox(height: Get.height*0.02,),
                 Commontextfield(tittle: 'Email', hint: 'Your email', obsecuretext: false),
-                CommonButton(tittle: 'Send conde')
+                SizedBox(height: Get.height*0.02,),
+                CommonButton(tittle: 'Send code')
               ],
             ),
           ),
