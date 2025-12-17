@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/modules/otp_page/otp_page_controller.dart';
 import 'package:nate/utils/app_images.dart';
 
@@ -34,7 +35,22 @@ class OtpPageView extends GetView<OtpController> {
                   ],
                 ),
 
+Text('Enter OTP',
+style: GoogleFonts.roboto( 
+  fontWeight: FontWeight.w700,
+  fontSize: 20,
+  color: Colors.white
+)
+),
+Text('We just sent you a 6 digit code to your email.  Please confirm it below.',
+maxLines: 3,
+style: GoogleFonts.roboto( 
+  fontWeight: FontWeight.w400,
+  fontSize: 12,
+  color: Colors.white,
 
+),
+),
 
                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,6 +67,7 @@ class OtpPageView extends GetView<OtpController> {
                         style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
+                          color: Colors.white
                         ),
                         decoration: const InputDecoration(
                           counterText: '',
@@ -74,11 +91,12 @@ class OtpPageView extends GetView<OtpController> {
                             : "Resend code ${controller.secondsRemaining}s",
                         style: TextStyle(
                           color: controller.secondsRemaining.value == 0
-                              ? const Color(0xFF1B1E28)
-                              : const Color(0xFF7D848D),
+                              ? Colors.white
+                              :Colors.white,
                         ),
                       ),
                     )),
+                    CommonButton(tittle: 'Verify')
               ],
             ),
           ),
