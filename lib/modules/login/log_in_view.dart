@@ -287,7 +287,57 @@ Widget _signUpView() {
             ),
           ),
         ),),SizedBox(height: Get.height * 0.01, width: double.infinity),
-        CommonButton(tittle: 'Verify Email')
+      
+          Row(
+          children: [
+            Checkbox(
+              activeColor: Colors.red,
+              value: controller.Checkbox.value,
+              onChanged: controller.clickCheckbox,
+              //shape: CircleBorder(),
+            ),
+            Text(
+              'I agree to the',
+              style: GoogleFonts.roboto(
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                fontSize: 14,
+              ),
+            ),
+            Text(
+              'Terms & Conditions',
+              
+              style: GoogleFonts.roboto(
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                fontSize: 14,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.white
+              ),
+            ),
+            Text(
+              ' And ',
+              style: GoogleFonts.roboto(
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                fontSize: 14,
+              ),
+            ),
+            Text(
+              'Privacy Policy',
+              style: GoogleFonts.roboto(
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+                fontSize: 14,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.white
+              ),
+            ),
+            Expanded(child: SizedBox()),
+          
+          ],
+        ),
+          CommonButton(tittle: 'Verify Email'),
       ],
     ),
   );
