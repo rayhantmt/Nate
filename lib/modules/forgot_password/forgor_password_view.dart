@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/textfield.dart';
 import 'package:nate/utils/app_images.dart';
 
 class ForgorPasswordView extends StatelessWidget {
@@ -35,7 +36,24 @@ class ForgorPasswordView extends StatelessWidget {
                 )
               ],
             
-                )
+                ),
+                SizedBox(height: Get.height*0.05,),
+                Text('No worries!',
+                style: GoogleFonts.roboto( 
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
+                  fontSize: 20
+                ),
+                ),
+                Text('Enter your registered email address or mobile number and we’ll send you instructions to reset your password. Let’s get you back on track quickly and securely!"',
+                style: GoogleFonts.roboto( 
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white,
+                  fontSize: 12
+                ),
+                ),
+                SizedBox(height: Get.height*0.02,),
+                Commontextfield(tittle: 'Email', hint: 'Your email', obsecuretext: false)
               ],
             ),
           ),
