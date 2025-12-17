@@ -216,6 +216,7 @@ Widget _loginView() {
 }
 
 Widget _signUpView() {
+  final controller = Get.find<LogInController>();
   return SingleChildScrollView(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -230,16 +231,48 @@ Widget _signUpView() {
           ),
         ),
         SizedBox(height: Get.height * 0.01, width: double.infinity),
-        Text('Please fill in your contact information',
-        style: GoogleFonts.roboto( 
-          fontWeight: FontWeight.w400,
-          color: Colors.white.withOpacity(0.8),
-          fontSize: 12
+        Text(
+          'Please fill in your contact information',
+          style: GoogleFonts.roboto(
+            fontWeight: FontWeight.w400,
+            color: Colors.white.withOpacity(0.8),
+            fontSize: 12,
+          ),
         ),
+        Commontextfield(
+          tittle: 'First Name',
+          hint: 'Enter your first name',
+          obsecuretext: false,
         ),
-        Commontextfield(tittle: 'First Name', hint: 'Enter your first name', obsecuretext: false),
-        Commontextfield(tittle: 'Last Name', hint: 'Enter your last name', obsecuretext: false),
-        
+        Commontextfield(
+          tittle: 'Last Name',
+          hint: 'Enter your last name',
+          obsecuretext: false,
+        ),
+        Commontextfield(
+          tittle: 'Email Address',
+          hint: 'Enter your email address',
+          obsecuretext: false,
+        ),
+        Commontextfield(
+          tittle: 'Contact Number',
+          hint: 'Enter your contact number ',
+          obsecuretext: false,
+        ),
+       Obx(() =>  Commontextfield(
+          tittle: 'Password',
+          hint: "**********",
+          obsecuretext: controller.signuppass.value,
+          suffix: GestureDetector(
+            onTap: () => controller.toggoleObsecue1(),
+            child: Icon(
+              controller.signuppass.value
+                  ? Icons.visibility
+                  : Icons.visibility_off,
+              color: Colors.white.withOpacity(0.8),
+            ),
+          ),
+        ),)
       ],
     ),
   );
