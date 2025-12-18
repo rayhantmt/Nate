@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/common_widgets/textfield.dart';
 import 'package:nate/modules/reset_password/reset_password_controller.dart';
 import 'package:nate/utils/app_images.dart';
@@ -86,6 +87,8 @@ class ResetPasswordView extends GetView<ResetPasswordController> {
             ),
           ),
         ),
+         SizedBox(height: Get.height*0.02,),
+         CommonButton(tittle: 'Update Password')
               ],
             ),
           ),
