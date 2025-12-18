@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/utils/app_images.dart';
 
 class ResetPasswordView extends StatelessWidget {
@@ -22,8 +23,32 @@ class ResetPasswordView extends StatelessWidget {
                       height: Get.height * 0.1,
                       width: Get.width * 0.15,
                     ),
+                    SizedBox(width: Get.width*0.05,),
+                    Text('Reset Password',
+                    style: GoogleFonts.roboto( 
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20
+                    ),
+                    )
                   ],
                 ),
+                SizedBox(height: Get.height*0.005,),
+                Text('Set Your New Passowrd',
+                style: GoogleFonts.roboto( 
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                  color: Colors.white
+                ),
+                ),
+                SizedBox(height: Get.height*0.01,),
+                Text('Create a new password to secure your account',
+                style: GoogleFonts.roboto( 
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  color: Colors.white.withOpacity(0.8)
+                ),
+                )
               ],
             ),
           ),
