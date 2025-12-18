@@ -238,57 +238,68 @@ Widget _signUpView() {
             color: Colors.white.withOpacity(0.8),
             fontSize: 12,
           ),
-        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
+        ),
+        SizedBox(height: Get.height * 0.01, width: double.infinity),
         Commontextfield(
           tittle: 'First Name',
           hint: 'Enter your first name',
           obsecuretext: false,
-        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
+        ),
+        SizedBox(height: Get.height * 0.01, width: double.infinity),
         Commontextfield(
           tittle: 'Last Name',
           hint: 'Enter your last name',
           obsecuretext: false,
-        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
+        ),
+        SizedBox(height: Get.height * 0.01, width: double.infinity),
         Commontextfield(
           tittle: 'Email Address',
           hint: 'Enter your email address',
           obsecuretext: false,
-        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
+        ),
+        SizedBox(height: Get.height * 0.01, width: double.infinity),
         Commontextfield(
           tittle: 'Contact Number',
           hint: 'Enter your contact number ',
           obsecuretext: false,
-        ),SizedBox(height: Get.height * 0.01, width: double.infinity),
-       Obx(() =>  Commontextfield(
-          tittle: 'Password',
-          hint: "**********",
-          obsecuretext: controller.signuppass.value,
-          suffix: GestureDetector(
-            onTap: () => controller.toggoleObsecue1(),
-            child: Icon(
-              controller.signuppass.value
-                  ? Icons.visibility
-                  : Icons.visibility_off,
-              color: Colors.white.withOpacity(0.8),
+        ),
+        SizedBox(height: Get.height * 0.01, width: double.infinity),
+        Obx(
+          () => Commontextfield(
+            tittle: 'Password',
+            hint: "**********",
+            obsecuretext: controller.signuppass.value,
+            suffix: GestureDetector(
+              onTap: () => controller.toggoleObsecue1(),
+              child: Icon(
+                controller.signuppass.value
+                    ? Icons.visibility
+                    : Icons.visibility_off,
+                color: Colors.white.withOpacity(0.8),
+              ),
             ),
           ),
-        ),),SizedBox(height: Get.height * 0.01, width: double.infinity),
-          Obx(() =>  Commontextfield(
-          tittle: 'Confirmed Password',
-          hint: "**********",
-          obsecuretext: controller.signuppass1.value,
-          suffix: GestureDetector(
-            onTap: () => controller.toggoleObsecue2(),
-            child: Icon(
-              controller.signuppass1.value
-                  ? Icons.visibility
-                  : Icons.visibility_off,
-              color: Colors.white.withOpacity(0.8),
+        ),
+        SizedBox(height: Get.height * 0.01, width: double.infinity),
+        Obx(
+          () => Commontextfield(
+            tittle: 'Confirmed Password',
+            hint: "**********",
+            obsecuretext: controller.signuppass1.value,
+            suffix: GestureDetector(
+              onTap: () => controller.toggoleObsecue2(),
+              child: Icon(
+                controller.signuppass1.value
+                    ? Icons.visibility
+                    : Icons.visibility_off,
+                color: Colors.white.withOpacity(0.8),
+              ),
             ),
           ),
-        ),),SizedBox(height: Get.height * 0.01, width: double.infinity),
-      
-          Row(
+        ),
+        SizedBox(height: Get.height * 0.01, width: double.infinity),
+
+        Row(
           children: [
             Checkbox(
               activeColor: Colors.red,
@@ -306,13 +317,13 @@ Widget _signUpView() {
             ),
             Text(
               'Terms & Conditions',
-              
+
               style: GoogleFonts.roboto(
                 fontWeight: FontWeight.w400,
                 color: Colors.white,
                 fontSize: 14,
                 decoration: TextDecoration.underline,
-                decorationColor: Colors.white
+                decorationColor: Colors.white,
               ),
             ),
             Text(
@@ -330,14 +341,13 @@ Widget _signUpView() {
                 color: Colors.white,
                 fontSize: 14,
                 decoration: TextDecoration.underline,
-                decorationColor: Colors.white
+                decorationColor: Colors.white,
               ),
             ),
             Expanded(child: SizedBox()),
-          
           ],
         ),
-          CommonButton(tittle: 'Verify Email'),
+        CommonButton(tittle: 'Verify Email'),
       ],
     ),
   );
