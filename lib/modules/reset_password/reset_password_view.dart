@@ -50,7 +50,7 @@ class ResetPasswordView extends StatelessWidget {
                   color: Colors.white.withOpacity(0.8)
                 ),
                 ),
-                SizedBox(height: Get.height*0.1,),
+                SizedBox(height: Get.height*0.02,),
                 Commontextfield(tittle: 'Enter new password', hint: '***********', obsecuretext: true)
               ],
             ),
