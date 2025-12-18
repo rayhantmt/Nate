@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/textfield.dart';
 import 'package:nate/utils/app_images.dart';
 
 class ResetPasswordView extends StatelessWidget {
@@ -48,7 +49,9 @@ class ResetPasswordView extends StatelessWidget {
                   fontSize: 12,
                   color: Colors.white.withOpacity(0.8)
                 ),
-                )
+                ),
+                SizedBox(height: Get.height*0.1,),
+                Commontextfield(tittle: 'Enter new password', hint: '***********', obsecuretext: true)
               ],
             ),
           ),
