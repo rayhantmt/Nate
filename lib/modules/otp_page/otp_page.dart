@@ -17,43 +17,51 @@ class OtpPageView extends GetView<OtpController> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 20,right: 20),
+            padding: const EdgeInsets.only(left: 20, right: 20),
             child: Column(
               children: [
                 Row(
                   children: [
-                    Image.asset(AppImages.backicon, height:Get.height*0.1,
-                    width: Get.width*0.15,),
-                    
-                    SizedBox(width: Get.width*0.03,),
-                    Text('Verify your email',
-                    style: GoogleFonts.roboto( 
-                      fontWeight: FontWeight.w700,
-                      fontSize: 20,
-                      color: Colors.white
+                    GestureDetector(
+                      onTap: () => Get.back(),
+                      child: Image.asset(
+                        AppImages.backicon,
+                        height: Get.height * 0.1,
+                        width: Get.width * 0.15,
+                      ),
                     ),
-                    )
+
+                    SizedBox(width: Get.width * 0.03),
+                    Text(
+                      'Verify your email',
+                      style: GoogleFonts.roboto(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
                   ],
                 ),
 
-Text('Enter OTP',
-style: GoogleFonts.roboto( 
-  fontWeight: FontWeight.w700,
-  fontSize: 20,
-  color: Colors.white
-)
-),
-Text('We just sent you a 6 digit code to your email.  Please confirm it below.',
-maxLines: 3,
-style: GoogleFonts.roboto( 
-  fontWeight: FontWeight.w400,
-  fontSize: 12,
-  color: Colors.white,
+                Text(
+                  'Enter OTP',
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  'We just sent you a 6 digit code to your email.  Please confirm it below.',
+                  maxLines: 3,
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    color: Colors.white,
+                  ),
+                ),
 
-),
-),
-
-                 Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: List.generate(6, (index) {
                     return SizedBox(
@@ -63,12 +71,14 @@ style: GoogleFonts.roboto(
                         focusNode: controller.otpFocusNodes[index],
                         keyboardType: TextInputType.number,
                         maxLength: 1,
-                        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                        inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly,
+                        ],
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
-                          color: Colors.white
+                          color: Colors.white,
                         ),
                         decoration: const InputDecoration(
                           counterText: '',
@@ -82,24 +92,27 @@ style: GoogleFonts.roboto(
                   }),
                 ),
                 const SizedBox(height: 16),
-                Obx(() => GestureDetector(
-                      onTap: controller.secondsRemaining.value == 0
-                          ? controller.resendCode
-                          : null,
-                      child: Text(
-                        controller.secondsRemaining.value == 0
-                            ? "Resend code"
-                            : "Resend code ${controller.secondsRemaining}s",
-                        style: TextStyle(
-                          color: controller.secondsRemaining.value == 0
-                              ? Colors.white
-                              :Colors.white,
-                        ),
+                Obx(
+                  () => GestureDetector(
+                    onTap: controller.secondsRemaining.value == 0
+                        ? controller.resendCode
+                        : null,
+                    child: Text(
+                      controller.secondsRemaining.value == 0
+                          ? "Resend code"
+                          : "Resend code ${controller.secondsRemaining}s",
+                      style: TextStyle(
+                        color: controller.secondsRemaining.value == 0
+                            ? Colors.white
+                            : Colors.white,
                       ),
-                    )),
-                    GestureDetector(
-                      onTap: () => Get.toNamed(AppPages.resetpass),
-                      child: CommonButton(tittle: 'Verify'))
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () => Get.toNamed(AppPages.resetpass),
+                  child: CommonButton(tittle: 'Verify'),
+                ),
               ],
             ),
           ),

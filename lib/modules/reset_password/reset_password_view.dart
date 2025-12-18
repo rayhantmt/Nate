@@ -21,10 +21,13 @@ class ResetPasswordView extends GetView<ResetPasswordController> {
               children: [
                 Row(
                   children: [
-                    Image.asset(
-                      AppImages.backicon,
-                      height: Get.height * 0.1,
-                      width: Get.width * 0.15,
+                    GestureDetector(
+                      onTap: () => Get.back(),
+                      child: Image.asset(
+                        AppImages.backicon,
+                        height: Get.height * 0.1,
+                        width: Get.width * 0.15,
+                      ),
                     ),
                     SizedBox(width: Get.width*0.05,),
                     Text('Reset Password',
