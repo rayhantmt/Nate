@@ -37,6 +37,11 @@ class ProfileView extends StatelessWidget {
                     width: Get.width*0.1,
                     )
                   ],
+                ),
+                SizedBox(height: Get.height*0.02,),
+                CircleAvatar(
+                  maxRadius: Get.height*0.07,
+                  child: Image.asset(AppImages.profileiamge),
                 )
               ],
             ),
