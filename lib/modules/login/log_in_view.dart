@@ -210,7 +210,7 @@ Widget _loginView() {
         ),
         SizedBox(height: Get.height * 0.02),
         GestureDetector(
-          onTap: () => Get.toNamed(AppPages.mainscreen),
+          onTap: () => Get.toNamed(AppPages.profile),
           child: CommonButton(tittle: 'Log In')),
       ],
     ),
