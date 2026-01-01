@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/profile_container.dart';
 import 'package:nate/utils/app_images.dart';
 
 class ProfileView extends StatelessWidget {
@@ -51,7 +52,8 @@ class ProfileView extends StatelessWidget {
                   fontSize: 24,
                   color: Colors.white
                 ),
-                )
+                ),
+                ProfileContainer()
               ],
             ),
           ),
