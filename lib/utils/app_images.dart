@@ -9,7 +9,7 @@ class AppImages {
   static const String editprofileback='assets/profile_back_icon.png';
   static const String savedporjects='assets/saved_projects.png';
   static const String historyicon='assets/history.png';
-  static const String contacticon='assets/contact-us.png';
+  static const String contacticon='assets/contact_us.png';
   static const String abouticon='assets/about_us.png';
   static const String policy='assets/privacy_policy.png';
   static const String terms='assets/terms.png';
