@@ -49,7 +49,7 @@ class ProfileView extends StatelessWidget {
                 style: GoogleFonts.roboto( 
                   fontWeight: FontWeight.w700,
                   fontSize: 24,
-                  
+                  color: Colors.white
                 ),
                 )
               ],
