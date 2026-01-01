@@ -14,4 +14,5 @@ class AppImages {
   static const String policy='assets/privacy_policy.png';
   static const String terms='assets/terms.png';
   static const String changepass='assets/rr.png';
+  static const String deleteacc='assets/Delete.png';
 }
