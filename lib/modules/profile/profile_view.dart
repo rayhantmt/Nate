@@ -53,7 +53,7 @@ class ProfileView extends StatelessWidget {
                   color: Colors.white
                 ),
                 ),
-                ProfileContainer()
+                ProfileContainer(tittle: 'Edit Profile Details',image: AppImages.editprofile,)
               ],
             ),
           ),

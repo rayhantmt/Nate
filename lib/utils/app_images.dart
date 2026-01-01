@@ -6,4 +6,5 @@ class AppImages {
   static const String settingsicon='assets/setting_icon.png';
   static const String profileiamge='assets/profile_frame.png';
   static const String editprofile='assets/edit_profile.png';
+  static const String editprofileback='assets/profile_back_icon.png';
 }
