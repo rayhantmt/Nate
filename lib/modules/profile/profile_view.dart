@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nate/utils/app_images.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -6,11 +7,7 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          
-        ],
-      ),
+      body: Stack(children: [Image.asset(AppImages.profileiamge)]),
     );
   }
 }
