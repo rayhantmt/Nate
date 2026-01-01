@@ -18,34 +18,36 @@ class ProfileView extends StatelessWidget {
             width: double.infinity,
           ),
           Padding(
-            padding:EdgeInsets.only(left: 20,right: 20),
+            padding: EdgeInsets.only(left: 20, right: 20),
             child: Column(
               children: [
-                SizedBox(height: Get.height*0.05,),
+                SizedBox(height: Get.height * 0.05),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Profile',
-                    style:GoogleFonts.roboto( 
-                      fontWeight: FontWeight.w700,
-                      fontSize: 32,
-                      color: Colors.white
-                    ) ,
+                    Text(
+                      'Profile',
+                      style: GoogleFonts.roboto(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 32,
+                        color: Colors.white,
+                      ),
                     ),
-                    Image.asset(AppImages.settingsicon,
-                    height: Get.height*0.05,
-                    width: Get.width*0.1,
-                    )
+                    Image.asset(
+                      AppImages.settingsicon,
+                      height: Get.height * 0.05,
+                      width: Get.width * 0.1,
+                    ),
                   ],
                 ),
-                SizedBox(height: Get.height*0.02,),
+                SizedBox(height: Get.height * 0.02),
                 CircleAvatar(
-                  maxRadius: Get.height*0.07,
+                  maxRadius: Get.height * 0.07,
                   child: Image.asset(AppImages.profileiamge),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
