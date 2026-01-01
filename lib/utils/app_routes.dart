@@ -10,6 +10,7 @@ import 'package:nate/modules/otp_page/otp_page.dart';
 import 'package:nate/modules/profile/profile_view.dart';
 import 'package:nate/modules/reset_password/reset_password_binding.dart';
 import 'package:nate/modules/reset_password/reset_password_view.dart';
+import 'package:nate/modules/settings/setting_view.dart';
 import 'package:nate/utils/app_pages.dart';
 
 class AppRoutes {
@@ -20,6 +21,7 @@ class AppRoutes {
     GetPage(name: AppPages.resetpass, page:  () => ResetPasswordView(),binding: ResetPasswordBinding()),
     GetPage(name: AppPages.emailverify, page: () => EmailVerifyPage(),binding: EmailVerifyBinding()),
     GetPage(name: AppPages.mainscreen, page: () => MainScreen(),),
-    GetPage(name: AppPages.profile, page: () => ProfileView(),)
+    GetPage(name: AppPages.profile, page: () => ProfileView(),),
+    GetPage(name: AppPages.settings, page: () => SettingView(),)
   ];
 }

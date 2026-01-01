@@ -6,4 +6,5 @@ class AppPages {
   static const String emailverify='/emailverify';
   static const String mainscreen='/mainscreen';
   static const String profile='/profile';
+  static const String settings='/settings';
 }
