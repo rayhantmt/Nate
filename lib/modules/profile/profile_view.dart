@@ -45,6 +45,13 @@ class ProfileView extends StatelessWidget {
                   maxRadius: Get.height * 0.07,
                   child: Image.asset(AppImages.profileiamge),
                 ),
+                Text('Lukas Wanger',
+                style: GoogleFonts.roboto( 
+                  fontWeight: FontWeight.w700,
+                  fontSize: 24,
+                  
+                ),
+                )
               ],
             ),
           ),
