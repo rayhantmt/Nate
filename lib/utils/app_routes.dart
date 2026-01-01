@@ -4,6 +4,7 @@ import 'package:nate/modules/email_verify_page/email_verify_page.dart';
 import 'package:nate/modules/forgot_password/forgor_password_view.dart';
 import 'package:nate/modules/login/log_in_binding.dart';
 import 'package:nate/modules/login/log_in_view.dart';
+import 'package:nate/modules/main_screen/main_screen.dart';
 import 'package:nate/modules/otp_page/otp_binding.dart';
 import 'package:nate/modules/otp_page/otp_page.dart';
 import 'package:nate/modules/reset_password/reset_password_binding.dart';
@@ -16,6 +17,7 @@ class AppRoutes {
     GetPage(name: AppPages.forgotpassword, page: () => ForgorPasswordView(),),
     GetPage(name: AppPages.otppage, page: () => OtpPageView(),binding: OtpBinding()),
     GetPage(name: AppPages.resetpass, page:  () => ResetPasswordView(),binding: ResetPasswordBinding()),
-    GetPage(name: AppPages.emailverify, page: () => EmailVerifyPage(),binding: EmailVerifyBinding())
+    GetPage(name: AppPages.emailverify, page: () => EmailVerifyPage(),binding: EmailVerifyBinding()),
+    GetPage(name: AppPages.mainscreen, page: () => MainScreen(),)
   ];
 }

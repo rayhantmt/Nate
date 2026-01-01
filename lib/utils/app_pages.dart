@@ -4,4 +4,5 @@ class AppPages {
   static const String otppage='/otppage';
   static const String resetpass='/resetpass';
   static const String emailverify='/emailverify';
+  static const String mainscreen='/mainscreen';
 }
