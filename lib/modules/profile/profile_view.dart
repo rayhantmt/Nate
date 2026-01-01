@@ -46,14 +46,20 @@ class ProfileView extends StatelessWidget {
                   maxRadius: Get.height * 0.07,
                   child: Image.asset(AppImages.profileiamge),
                 ),
-                Text('Lukas Wanger',
-                style: GoogleFonts.roboto( 
-                  fontWeight: FontWeight.w700,
-                  fontSize: 24,
-                  color: Colors.white
+                 SizedBox(height: Get.height * 0.01),
+                Text(
+                  'Lukas Wanger',
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 24,
+                    color: Colors.white,
+                  ),
                 ),
+                SizedBox(height: Get.height * 0.01),
+                ProfileContainer(
+                  tittle: 'Edit Profile Details',
+                  image: AppImages.editprofile,
                 ),
-                ProfileContainer(tittle: 'Edit Profile Details',image: AppImages.editprofile,)
               ],
             ),
           ),
