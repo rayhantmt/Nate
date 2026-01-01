@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nate/common_widgets/profile_container.dart';
 import 'package:nate/utils/app_images.dart';
 
@@ -12,8 +13,11 @@ class SettingView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
           children: [
-
-            ProfileContainer(tittle: 'Change Password', image: AppImages.changepass)
+            SizedBox(height: Get.height),
+            ProfileContainer(
+              tittle: 'Change Password',
+              image: AppImages.changepass,
+            ),
           ],
         ),
       ),
