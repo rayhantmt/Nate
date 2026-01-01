@@ -5,6 +5,7 @@ import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/common_widgets/textfield.dart';
 import 'package:nate/modules/reset_password/reset_password_controller.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
 
 class ResetPasswordView extends GetView<ResetPasswordController> {
   const ResetPasswordView({super.key});
@@ -91,7 +92,10 @@ class ResetPasswordView extends GetView<ResetPasswordController> {
           ),
         ),
          SizedBox(height: Get.height*0.02,),
-         CommonButton(tittle: 'Update Password')
+         GestureDetector(
+          
+          onTap: () => Get.toNamed(AppPages.login),
+          child: CommonButton(tittle: 'Update Password'))
               ],
             ),
           ),

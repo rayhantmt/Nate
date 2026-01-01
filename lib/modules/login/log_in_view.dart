@@ -348,7 +348,7 @@ Widget _signUpView() {
           ],
         ),
         GestureDetector(
-          onTap: () => Get.toNamed(AppPages.otppage),
+          onTap: () => Get.toNamed(AppPages.emailverify),
           child: CommonButton(tittle: 'Verify Email')),
       ],
     ),

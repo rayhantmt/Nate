@@ -3,4 +3,5 @@ class AppPages {
   static const String forgotpassword='/forgotpassword';
   static const String otppage='/otppage';
   static const String resetpass='/resetpass';
+  static const String emailverify='/emailverify';
 }

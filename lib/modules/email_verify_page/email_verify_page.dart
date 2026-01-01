@@ -110,7 +110,7 @@ class EmailVerifyPage extends GetView<EmailVerifyController> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () => Get.toNamed(AppPages.resetpass),
+                  onTap: () => Get.toNamed(AppPages.login),
                   child: CommonButton(tittle: 'Verify'),
                 ),
               ],
