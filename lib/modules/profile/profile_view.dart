@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/common_widgets/profile_container.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -34,10 +35,13 @@ class ProfileView extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    Image.asset(
-                      AppImages.settingsicon,
-                      height: Get.height * 0.05,
-                      width: Get.width * 0.1,
+                    GestureDetector(
+                      onTap: () => Get.toNamed(AppPages.settings),
+                      child: Image.asset(
+                        AppImages.settingsicon,
+                        height: Get.height * 0.05,
+                        width: Get.width * 0.1,
+                      ),
                     ),
                   ],
                 ),
