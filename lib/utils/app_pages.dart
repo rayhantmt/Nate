@@ -7,4 +7,5 @@ class AppPages {
   static const String mainscreen='/mainscreen';
   static const String profile='/profile';
   static const String settings='/settings';
+  static const String editprofile='/editprofile';
 }

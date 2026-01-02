@@ -67,9 +67,12 @@ class ProfileView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: Get.height * 0.02),
-                ProfileContainer(
-                  tittle: 'Edit Profile Details',
-                  image: AppImages.editprofile,
+                GestureDetector(
+                  onTap: () => Get.toNamed(AppPages.editprofile),
+                  child: ProfileContainer(
+                    tittle: 'Edit Profile Details',
+                    image: AppImages.editprofile,
+                  ),
                 ),
                 SizedBox(height: Get.height * 0.015),
                 ProfileContainer(

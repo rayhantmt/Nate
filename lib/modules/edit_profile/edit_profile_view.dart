@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/state_manager.dart';
+import 'package:nate/modules/edit_profile/edit_profile_controller.dart';
 
-class EditProfileView extends StatelessWidget {
+class EditProfileView extends GetView<EditProfileController> {
   const EditProfileView({super.key});
 
   @override
