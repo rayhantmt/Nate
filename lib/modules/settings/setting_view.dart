@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/common_widgets/profile_container.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
 
 class SettingView extends StatelessWidget {
   const SettingView({super.key});
@@ -28,9 +29,12 @@ class SettingView extends StatelessWidget {
                 ),
               ],
             ),
-            ProfileContainer(
-              tittle: 'Change Password',
-              image: AppImages.changepass,
+            GestureDetector(
+              onTap: () => Get.toNamed(AppPages.changepass),
+              child: ProfileContainer(
+                tittle: 'Change Password',
+                image: AppImages.changepass,
+              ),
             ),
             SizedBox(height: Get.height * 0.03),
             Container(
