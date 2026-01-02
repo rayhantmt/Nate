@@ -1,4 +1,6 @@
 import 'package:get/route_manager.dart';
+import 'package:nate/modules/change_password/change_password_binding.dart';
+import 'package:nate/modules/change_password/change_password_view.dart';
 import 'package:nate/modules/edit_profile/edit_profile_binding.dart';
 import 'package:nate/modules/edit_profile/edit_profile_view.dart';
 import 'package:nate/modules/email_verify_page/email_verify_binding.dart';
@@ -25,6 +27,7 @@ class AppRoutes {
     GetPage(name: AppPages.mainscreen, page: () => MainScreen(),),
     GetPage(name: AppPages.profile, page: () => ProfileView(),),
     GetPage(name: AppPages.settings, page: () => SettingView(),),
-    GetPage(name: AppPages.editprofile, page: () => EditProfileView(),binding: EditProfileBinding())
+    GetPage(name: AppPages.editprofile, page: () => EditProfileView(),binding: EditProfileBinding()),
+    GetPage(name: AppPages.changepass, page: () => ChangePasswordView(),binding: ChangePasswordBinding())
   ];
 }
