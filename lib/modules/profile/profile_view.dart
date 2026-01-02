@@ -47,17 +47,17 @@ class ProfileView extends StatelessWidget {
                 ),
                 SizedBox(height: Get.height * 0.02),
                 CircleAvatar(
-  radius: Get.height * 0.07,
-  child: ClipOval(
-    child: Image.asset(
-      AppImages.profileimg,
-      fit: BoxFit.cover, // Ensures the image fills the circle without gaps
-      width: Get.height * 0.14, // Should be double the radius
-      height: Get.height * 0.14,
-    ),
-  ),
-),
-                 SizedBox(height: Get.height * 0.01),
+                  radius: Get.height * 0.07,
+                  child: ClipOval(
+                    child: Image.asset(
+                      AppImages.profileimg,
+                      fit: BoxFit.cover,
+                      width: Get.height * 0.14,
+                      height: Get.height * 0.14,
+                    ),
+                  ),
+                ),
+                SizedBox(height: Get.height * 0.01),
                 Text(
                   'Lukas Wanger',
                   style: GoogleFonts.roboto(
@@ -71,17 +71,31 @@ class ProfileView extends StatelessWidget {
                   tittle: 'Edit Profile Details',
                   image: AppImages.editprofile,
                 ),
-                 SizedBox(height: Get.height * 0.015),
-                 ProfileContainer(tittle: 'Saved Projects', image: AppImages.savedporjects),
-                  SizedBox(height: Get.height * 0.015),
-                  ProfileContainer(tittle: 'History', image: AppImages.historyicon),
-                  SizedBox(height: Get.height * 0.015),
-                  ProfileContainer(tittle: 'Contact Us', image: AppImages.contacticon),
-                  SizedBox(height: Get.height * 0.015),
-                  ProfileContainer(tittle: 'Privacy Policy', image: AppImages.policy),
-                  SizedBox(height: Get.height * 0.015),
-                  ProfileContainer(tittle: 'Terms & condition', image: AppImages.terms)
-
+                SizedBox(height: Get.height * 0.015),
+                ProfileContainer(
+                  tittle: 'Saved Projects',
+                  image: AppImages.savedporjects,
+                ),
+                SizedBox(height: Get.height * 0.015),
+                ProfileContainer(
+                  tittle: 'History',
+                  image: AppImages.historyicon,
+                ),
+                SizedBox(height: Get.height * 0.015),
+                ProfileContainer(
+                  tittle: 'Contact Us',
+                  image: AppImages.contacticon,
+                ),
+                SizedBox(height: Get.height * 0.015),
+                ProfileContainer(
+                  tittle: 'Privacy Policy',
+                  image: AppImages.policy,
+                ),
+                SizedBox(height: Get.height * 0.015),
+                ProfileContainer(
+                  tittle: 'Terms & condition',
+                  image: AppImages.terms,
+                ),
               ],
             ),
           ),
