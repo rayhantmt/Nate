@@ -18,7 +18,7 @@ final Widget? suffix;
         style: GoogleFonts.roboto( fontWeight: FontWeight.w600,fontSize: 14,color: Colors.white),
         ),
         Container(
-          height: Get.height*0.04,
+          height: Get.height*0.05,
           width: double.infinity,
           decoration: BoxDecoration(
             border: Border.all(
