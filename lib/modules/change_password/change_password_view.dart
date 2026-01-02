@@ -23,10 +23,13 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
               SizedBox(height: Get.height * 0.06),
               Row(
                 children: [
-                  Image.asset(
-                    AppImages.backicon,
-                    height: Get.height * 0.05,
-                    width: Get.width * 0.1,
+                  GestureDetector(
+                    onTap: () => Get.back(),
+                    child: Image.asset(
+                      AppImages.backicon,
+                      height: Get.height * 0.05,
+                      width: Get.width * 0.1,
+                    ),
                   ),
                   SizedBox(width: Get.width * 0.07),
                   Text(
@@ -96,7 +99,9 @@ class ChangePasswordView extends GetView<ChangePasswordController> {
             ),
             ),
             SizedBox(height: Get.height * 0.02),
-            CommonButton(tittle: 'Update Password')
+            GestureDetector(
+              onTap: () => Get.back(),
+              child: CommonButton(tittle: 'Update Password'))
             ],
           ),
         ),
