@@ -22,10 +22,13 @@ class EditProfileView extends GetView<EditProfileController> {
               SizedBox(height: Get.height * 0.07),
               Row(
                 children: [
-                  Image.asset(
-                    AppImages.backicon,
-                    height: Get.height * 0.05,
-                    width: Get.width * 0.1,
+                  GestureDetector(
+                    onTap: () => Get.back(),
+                    child: Image.asset(
+                      AppImages.backicon,
+                      height: Get.height * 0.05,
+                      width: Get.width * 0.1,
+                    ),
                   ),
                   SizedBox(width: Get.width * 0.08),
                   Text(
