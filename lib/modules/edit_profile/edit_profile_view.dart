@@ -78,6 +78,12 @@ class EditProfileView extends GetView<EditProfileController> {
                 obsecuretext: false,
               ),
               SizedBox(height: Get.height * 0.03),
+               Commontextfield(
+                tittle: 'Shipping Address',
+                hint: '120 Baker Street, Los Angeles, CA 90012',
+                obsecuretext: false,
+              ),
+              SizedBox(height: Get.height * 0.03),
               GestureDetector(
                 onTap: () => Get.back(),
                 child: CommonButton(tittle: 'Save Changes'),

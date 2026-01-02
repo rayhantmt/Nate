@@ -211,7 +211,8 @@ Widget _loginView() {
         SizedBox(height: Get.height * 0.02),
         GestureDetector(
           onTap: () => Get.toNamed(AppPages.profile),
-          child: CommonButton(tittle: 'Log In')),
+          child: CommonButton(tittle: 'Log In'),
+        ),
       ],
     ),
   );
@@ -266,6 +267,12 @@ Widget _signUpView() {
           obsecuretext: false,
         ),
         SizedBox(height: Get.height * 0.01, width: double.infinity),
+        Commontextfield(
+          tittle: 'Shipping Address',
+          hint: '120 Baker Street, Los Angeles, CA 90012',
+          obsecuretext: false,
+        ),
+         SizedBox(height: Get.height * 0.01, width: double.infinity),
         Obx(
           () => Commontextfield(
             tittle: 'Password',
@@ -351,7 +358,8 @@ Widget _signUpView() {
         ),
         GestureDetector(
           onTap: () => Get.toNamed(AppPages.emailverify),
-          child: CommonButton(tittle: 'Verify Email')),
+          child: CommonButton(tittle: 'Verify Email'),
+        ),
       ],
     ),
   );
