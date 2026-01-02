@@ -16,7 +16,7 @@ class SettingView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            SizedBox(height: Get.height * 0.1),
+            SizedBox(height: Get.height * 0.06),
             Row(
               children: [
                 GestureDetector(
@@ -27,8 +27,17 @@ class SettingView extends StatelessWidget {
                     width: Get.width * 0.1,
                   ),
                 ),
+                SizedBox(width: Get.width*0.06,),
+                Text('Settings',
+                style: GoogleFonts.openSans( 
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                  color: Colors.white
+                ),
+                )
               ],
             ),
+            SizedBox(height: Get.height*0.02,),
             GestureDetector(
               onTap: () => Get.toNamed(AppPages.changepass),
               child: ProfileContainer(
@@ -52,7 +61,7 @@ class SettingView extends StatelessWidget {
                     width: Get.width * 0.1,
                   ),
                   Text(
-                    'Delete account',
+                    'Delete Account',
                     style: GoogleFonts.roboto(
                       fontWeight: FontWeight.w500,
                       fontSize: 14,

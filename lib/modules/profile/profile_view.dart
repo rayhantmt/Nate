@@ -81,7 +81,7 @@ class ProfileView extends StatelessWidget {
                 ),
                 SizedBox(height: Get.height * 0.015),
                 ProfileContainer(
-                  tittle: 'History',
+                  tittle: 'Purchase History',
                   image: AppImages.historyicon,
                 ),
                 SizedBox(height: Get.height * 0.015),
