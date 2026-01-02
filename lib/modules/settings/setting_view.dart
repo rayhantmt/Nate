@@ -16,6 +16,12 @@ class SettingView extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: Get.height*0.1),
+            Row(children: [
+              Image.asset(AppImages.backicon,
+              height: Get.height * 0.05,
+                        width: Get.width * 0.1,
+              )
+            ],),
             ProfileContainer(
               tittle: 'Change Password',
               image: AppImages.changepass,
