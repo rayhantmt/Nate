@@ -47,9 +47,16 @@ class ProfileView extends StatelessWidget {
                 ),
                 SizedBox(height: Get.height * 0.02),
                 CircleAvatar(
-                  maxRadius: Get.height * 0.07,
-                  child: Image.asset(AppImages.profileiamge),
-                ),
+  radius: Get.height * 0.07,
+  child: ClipOval(
+    child: Image.asset(
+      AppImages.profileimg,
+      fit: BoxFit.cover, // Ensures the image fills the circle without gaps
+      width: Get.height * 0.14, // Should be double the radius
+      height: Get.height * 0.14,
+    ),
+  ),
+),
                  SizedBox(height: Get.height * 0.01),
                 Text(
                   'Lukas Wanger',
