@@ -7,6 +7,13 @@ class ChangePasswordView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff17191A),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text('Change Password')
+          ],
+        ),
+      ),
     );
   }
 }
