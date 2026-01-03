@@ -19,4 +19,5 @@ class AppImages {
   static const String homeicon='assts/home_icon.png';
   static const String profieicon='assets/profile_icon.png';
   static const String mainhomebackground='assets/home_background.png';
+  static const String homelogo='assets/home_logo.png';
 }
