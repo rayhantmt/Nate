@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nate/utils/app_images.dart';
 
 class HomeView extends StatelessWidget {
@@ -12,6 +13,15 @@ class HomeView extends StatelessWidget {
         height: double.infinity,
         width: double.infinity,
         fit: BoxFit.cover,
+        ),
+        Column(
+          children: [
+            SizedBox(height: Get.height*0.05,),
+            Image.asset(AppImages.homelogo,
+            height: Get.height*0.15,
+            width: Get.width*0.30,
+            )
+          ],
         )
       ],
     );
