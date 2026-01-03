@@ -9,4 +9,5 @@ class AppPages {
   static const String settings='/settings';
   static const String editprofile='/editprofile';
   static const String changepass='/changepass';
+  
 }
