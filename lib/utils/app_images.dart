@@ -16,4 +16,7 @@ class AppImages {
   static const String changepass='assets/rr.png';
   static const String deleteacc='assets/Delete.png';
   static const String profileimg='assets/profile.jpg';
+  static const String homeicon='assts/home_icon.png';
+  static const String profieicon='assets/profile_icon.png';
+  static const String mainhomebackground='assets/home_background.png';
 }
