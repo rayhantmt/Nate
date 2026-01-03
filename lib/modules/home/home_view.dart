@@ -14,14 +14,22 @@ class HomeView extends StatelessWidget {
         width: double.infinity,
         fit: BoxFit.cover,
         ),
-        Column(
-          children: [
-            SizedBox(height: Get.height*0.05,),
-            Image.asset(AppImages.homelogo,
-            height: Get.height*0.15,
-            width: Get.width*0.30,
-            )
-          ],
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              SizedBox(height: Get.height*0.05,),
+              Row(
+                children: [
+                  Image.asset(AppImages.homelogo,
+                  height: Get.height*0.15,
+                  width: Get.width*0.30,
+                  ),
+                  Image.asset(AppImages.profileimg)
+                ],
+              )
+            ],
+          ),
         )
       ],
     );
