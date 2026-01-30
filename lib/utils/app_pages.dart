@@ -1,3 +1,7 @@
+
+
+import 'package:flutter/material.dart';
+
 class AppPages {
   static const String login='/login';
   static const String forgotpassword='/forgotpassword';
@@ -9,5 +13,7 @@ class AppPages {
   static const String settings='/settings';
   static const String editprofile='/editprofile';
   static const String changepass='/changepass';
+  static const String projectsetup='/projectsetup';
+  static const String newproposl='/newproposal';
   
 }

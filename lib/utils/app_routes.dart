@@ -10,9 +10,13 @@ import 'package:nate/modules/login/log_in_binding.dart';
 import 'package:nate/modules/login/log_in_view.dart';
 import 'package:nate/modules/main_screen/main_screen.dart';
 import 'package:nate/modules/main_screen/main_screen_binding.dart';
+import 'package:nate/modules/new_proposal/new_proposal_binding.dart';
+import 'package:nate/modules/new_proposal/new_proposal_view.dart';
 import 'package:nate/modules/otp_page/otp_binding.dart';
 import 'package:nate/modules/otp_page/otp_page.dart';
 import 'package:nate/modules/profile/profile_view.dart';
+import 'package:nate/modules/project_setup/project_setup_binding.dart';
+import 'package:nate/modules/project_setup/project_setup_view.dart';
 import 'package:nate/modules/reset_password/reset_password_binding.dart';
 import 'package:nate/modules/reset_password/reset_password_view.dart';
 import 'package:nate/modules/settings/setting_view.dart';
@@ -29,6 +33,8 @@ class AppRoutes {
     GetPage(name: AppPages.profile, page: () => ProfileView(),),
     GetPage(name: AppPages.settings, page: () => SettingView(),),
     GetPage(name: AppPages.editprofile, page: () => EditProfileView(),binding: EditProfileBinding()),
-    GetPage(name: AppPages.changepass, page: () => ChangePasswordView(),binding: ChangePasswordBinding())
+    GetPage(name: AppPages.changepass, page: () => ChangePasswordView(),binding: ChangePasswordBinding()),
+    GetPage(name: AppPages.projectsetup, page: () => ProjectSetupView(),binding: ProjectSetupBinding()),
+    GetPage(name: AppPages.newproposl, page: () => NewProposalView(),binding: NewProposalBinding())
   ];
 }
