@@ -28,17 +28,30 @@ class ProjectSetupView extends StatelessWidget {
                       height: Get.height * 0.04,
                     ),
                   ),
-                  SizedBox(width: Get.width*0.05,),
-                  Text('Project Setup',
-                  style: GoogleFonts.openSans( 
-                    fontWeight: FontWeight.w700,
-                    fontSize: 20,
-                    color: Colors.white
+                  SizedBox(width: Get.width * 0.05),
+                  Text(
+                    'Project Setup',
+                    style: GoogleFonts.openSans(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
                   ),
-                  )
                 ],
               ),
-              SizedBox(height: Get.height*0.02,),
+              SizedBox(height: Get.height * 0.02),
+              Row(
+                children: [
+                  Container(
+                    height: Get.height * 0.03,
+                    width: Get.width * 0.3,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: Color(0xff000000),
+                    ),
+                  ),
+                ],
+              ),
               ClipRRect(
                 borderRadius: BorderRadiusGeometry.circular(12),
                 child: Image.file(
