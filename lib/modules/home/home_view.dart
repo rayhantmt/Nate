@@ -20,14 +20,19 @@ class HomeView extends StatelessWidget {
             children: [
               SizedBox(height: Get.height*0.05,),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(AppImages.homelogo,
                   height: Get.height*0.15,
                   width: Get.width*0.30,
                   ),
-                  Image.asset(AppImages.profileimg)
+                  CircleAvatar(
+                    backgroundImage: AssetImage(AppImages.profileimg),
+                  )
                 ],
-              )
+              ),
+              
+              Image.asset(AppImages.colourfuldivider),
             ],
           ),
         )

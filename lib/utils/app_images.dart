@@ -20,4 +20,8 @@ class AppImages {
   static const String profieicon='assets/profile_icon.png';
   static const String mainhomebackground='assets/home_background.png';
   static const String homelogo='assets/home_logo.png';
+  static const String colourfuldivider='assets/colourful_divider.png';
+  static const String profilebottomlogo='assets/profile_bottom_logo.png';
+  static const String plusbottomicon='assets/plus_bottom_icon.png';
+  static const String homebottomicon='assets/home_bottom_icon.png';
 }
