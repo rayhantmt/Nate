@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/modules/new_proposal/new_proposal_controller.dart';
 import 'package:nate/utils/app_images.dart';
 
@@ -27,8 +28,17 @@ class ProjectSetupView extends StatelessWidget {
                       height: Get.height * 0.04,
                     ),
                   ),
+                  SizedBox(width: Get.width*0.05,),
+                  Text('Project Setup',
+                  style: GoogleFonts.openSans( 
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                    color: Colors.white
+                  ),
+                  )
                 ],
               ),
+              SizedBox(height: Get.height*0.02,),
               ClipRRect(
                 borderRadius: BorderRadiusGeometry.circular(12),
                 child: Image.file(
