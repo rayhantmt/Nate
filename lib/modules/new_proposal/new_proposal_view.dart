@@ -7,7 +7,7 @@ class NewProposalView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      backgroundColor: AppImages.primarycolor,
       body: Column(
         children: [
           Text('New prop')

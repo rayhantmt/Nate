@@ -1,4 +1,11 @@
+import 'package:flutter/widgets.dart';
+
 class AppImages {
+  //colors
+  static const Color primarycolor=Color(0xff17191A);
+
+
+  //images
   static const String splash='assets/splash.png';
   static const String login='assets/log_in.png';
   static const String backicon='assets/back_icon.png';
@@ -24,4 +31,5 @@ class AppImages {
   static const String profilebottomlogo='assets/profile_bottom_logo.png';
   static const String plusbottomicon='assets/plus_bottom_icon.png';
   static const String homebottomicon='assets/home_bottom_icon.png';
+  
 }
