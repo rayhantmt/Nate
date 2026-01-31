@@ -44,36 +44,83 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                 Obx(() =>  Container(
-                    height: Get.height * 0.04,
-                    width: Get.width * 0.4,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: Color(0xff000000),
+                  Obx(
+                    () => Container(
+                      height: Get.height * 0.04,
+                      width: Get.width * 0.4,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: Color(0xff000000),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          GestureDetector(
+                            onTap: () => controller.toggle(),
+                            child: Text(
+                              'Frame',
+                              style: TextStyle(
+                                color: controller.framed.value
+                                    ? Colors.red
+                                    : Colors.white,
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () => controller.toggle(),
+                            child: Text(
+                              'No Frame',
+                              style: TextStyle(
+                                color: controller.framed.value
+                                    ? Colors.white
+                                    : Colors.red,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                           Text('Frame',style: TextStyle(
-                            color: controller.framed.value?Colors.red:Colors.white
-                           ),),
-                           Text('No Frame',style: TextStyle(
-                            color: controller.framed.value?Colors.white:Colors.red
-                           ),)
-                      ],
-                    ),
-                  ),),
-                   Container(
-                    height: Get.height * 0.04,
-                    width: Get.width * 0.4,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: Color(0xff000000),
+                  ),
+                  Obx(
+                    () => Container(
+                      height: Get.height * 0.04,
+                      width: Get.width * 0.4,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        color: Color(0xff000000),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          GestureDetector(
+                            onTap: () => controller.toggle2(),
+                            child: Text(
+                              'Painted',
+                              style: TextStyle(
+                                color: controller.painted.value
+                                    ? Colors.red
+                                    : Colors.white,
+                              ),
+                            ),
+                          ),
+                          GestureDetector(
+                            onTap: () => controller.toggle2(),
+                            child: Text(
+                              'Unpainted',
+                              style: TextStyle(
+                                color: controller.painted.value
+                                    ? Colors.white
+                                    : Colors.red,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: Get.height*0.02,),
+              SizedBox(height: Get.height * 0.02),
               ClipRRect(
                 borderRadius: BorderRadiusGeometry.circular(12),
                 child: Image.file(
