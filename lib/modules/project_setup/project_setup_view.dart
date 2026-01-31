@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/new_proposal_container.dart';
 import 'package:nate/modules/new_proposal/new_proposal_controller.dart';
 import 'package:nate/modules/project_setup/project_setup_controller.dart';
 import 'package:nate/utils/app_images.dart';
@@ -188,6 +189,14 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                             color: Colors.white,
                           ),
                         ),
+                        SizedBox(height: Get.height*0.02,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                          NewProposalContainer(tittle: 'MF Red', c: Color(0xffED1B30)),
+                          NewProposalContainer(tittle: 'MF Black', c: Color(0xff231F20)),
+                          NewProposalContainer(tittle: 'Yellow', c: Color(0xffFAB812))
+                        ],)
                       ],
                     ),
                   ),
