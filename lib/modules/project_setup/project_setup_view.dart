@@ -176,59 +176,62 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                 ),
               ),
               Obx(
-                () => SizedBox(
-                  height:  Get.height*0.4,
-                  child: Container(
-                    decoration: BoxDecoration(),
-                    child: Column(
-                      children: [
-                        Text(
-                          'Choose Color',
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                            color: Colors.white,
+                () => controller.painted.value
+                    ? SizedBox(
+                        height: Get.height * 0.4,
+                        child: Container(
+                          decoration: BoxDecoration(),
+                          child: Column(
+                            children: [
+                              Text(
+                                'Choose Color',
+                                style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 14,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(height: Get.height * 0.02),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  NewProposalContainer(
+                                    tittle: 'MF Red',
+                                    c: Color(0xffED1B30),
+                                  ),
+                                  NewProposalContainer(
+                                    tittle: 'MF Black',
+                                    c: Color(0xff231F20),
+                                  ),
+                                  NewProposalContainer(
+                                    tittle: 'Yellow',
+                                    c: Color(0xffFAB812),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: Get.height * 0.02),
+                              Row(
+                                children: [
+                                  NewProposalContainer(
+                                    tittle: 'Orange',
+                                    c: Color(0xffF58020),
+                                  ),
+                                  NewProposalContainer(
+                                    tittle: 'Slate Grey',
+                                    c: Color(0xff789FBB),
+                                  ),
+                                  NewProposalContainer(
+                                    tittle: 'Powder Blue',
+                                    c: Color(0xff789FBB),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox(height: Get.height * 0.02),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            NewProposalContainer(
-                              tittle: 'MF Red',
-                              c: Color(0xffED1B30),
-                            ),
-                            NewProposalContainer(
-                              tittle: 'MF Black',
-                              c: Color(0xff231F20),
-                            ),
-                            NewProposalContainer(
-                              tittle: 'Yellow',
-                              c: Color(0xffFAB812),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: Get.height * 0.02),
-                        Row(
-                          children: [
-                            NewProposalContainer(
-                              tittle: 'Orange',
-                              c: Color(0xffF58020),
-                            ),
-                            NewProposalContainer(
-                              tittle: 'Slate Grey',
-                              c: Color(0xff789FBB),
-                            ),
-                            NewProposalContainer(
-                              tittle: 'Powder Blue',
-                              c: Color(0xff789FBB),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                      )
+                    : Text(''),
               ),
             ],
           ),
