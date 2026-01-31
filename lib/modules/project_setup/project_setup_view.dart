@@ -259,6 +259,28 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                   ),
                 ),
               ),
+              SizedBox(height: Get.height*0.02,),
+              Container(
+                height: Get.height*0.06,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xff2E3030),
+                  borderRadius: BorderRadius.circular(16)
+                ),
+                child: Center( child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.add,
+                    color: Color(0xffEC1B34),
+                    ),
+                    Text('Add',
+                    style: GoogleFonts.roboto( 
+                      color: Color(0xfffEC1B34)
+                    ),
+                    )
+                  ],
+                ),),
+              )
             ],
           ),
         ),
