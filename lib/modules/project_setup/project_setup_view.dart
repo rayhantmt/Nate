@@ -131,67 +131,69 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(height: Get.height*0.02,),
-              Text('Length',
-              style: GoogleFonts.roboto( 
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: Colors.white
-              ),
+              SizedBox(height: Get.height * 0.02),
+              Text(
+                'Length',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: Colors.white,
+                ),
               ),
               Container(
-                height: Get.height*0.05,
+                height: Get.height * 0.05,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(width: 1,color: Color(0xffFFFFFFCC))
+                  border: Border.all(width: 1, color: Color(0xffFFFFFFCC)),
                 ),
                 child: TextFormField(
-                  
-                  style: TextStyle(
-                    color: Colors.white
-                  ),
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-
-                  ),
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(border: InputBorder.none),
                 ),
               ),
-              SizedBox(height: Get.height*0.02,),
-              Text('width',
-              style: GoogleFonts.roboto( 
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: Colors.white
-              ),
+              SizedBox(height: Get.height * 0.02),
+              Text(
+                'width',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: Colors.white,
+                ),
               ),
               Container(
-                height: Get.height*0.05,
+                height: Get.height * 0.05,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(width: 1,color: Color(0xffFFFFFFCC))
+                  border: Border.all(width: 1, color: Color(0xffFFFFFFCC)),
                 ),
                 child: TextFormField(
-                  
-                  style: TextStyle(
-                    color: Colors.white
-                  ),
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(border: InputBorder.none),
+                ),
+              ),
+              Obx(
+                () => SizedBox(
+                  height: controller.painted.value ? Get.height * 0.22 : 10,
+                  child: Container(
+                    decoration: BoxDecoration(),
+                    child: Column(
+                      children: [
+                        Text(
+                          'Choose Color',
+                          style: GoogleFonts.roboto(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            Obx(() =>  SizedBox(
-              height: controller.painted.value?Get.height*0.22:10,
-              child: Container(
-                decoration: BoxDecoration(
-                 
-                ),
-              ),
-             ),)
-            ]
+            ],
           ),
         ),
       ),
