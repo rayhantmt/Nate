@@ -12,5 +12,6 @@ class AppPages {
   static const String changepass='/changepass';
   static const String projectsetup='/projectsetup';
   static const String newproposl='/newproposal';
+  static const String projectinfo='/projectinfo';
   
 }

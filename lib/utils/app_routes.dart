@@ -15,6 +15,8 @@ import 'package:nate/modules/new_proposal/new_proposal_view.dart';
 import 'package:nate/modules/otp_page/otp_binding.dart';
 import 'package:nate/modules/otp_page/otp_page.dart';
 import 'package:nate/modules/profile/profile_view.dart';
+import 'package:nate/modules/project_info/project_info_binding.dart';
+import 'package:nate/modules/project_info/project_info_view.dart';
 import 'package:nate/modules/project_setup/project_setup_binding.dart';
 import 'package:nate/modules/project_setup/project_setup_view.dart';
 import 'package:nate/modules/reset_password/reset_password_binding.dart';
@@ -35,6 +37,7 @@ class AppRoutes {
     GetPage(name: AppPages.editprofile, page: () => EditProfileView(),binding: EditProfileBinding()),
     GetPage(name: AppPages.changepass, page: () => ChangePasswordView(),binding: ChangePasswordBinding()),
     GetPage(name: AppPages.projectsetup, page: () => ProjectSetupView(),binding: ProjectSetupBinding()),
-    GetPage(name: AppPages.newproposl, page: () => NewProposalView(),binding: NewProposalBinding())
+    GetPage(name: AppPages.newproposl, page: () => NewProposalView(),binding: NewProposalBinding()),
+    GetPage(name: AppPages.projectinfo, page: () => ProjectInfoView(),binding: ProjectInfoBinding())
   ];
 }
