@@ -7,6 +7,7 @@ import 'package:nate/common_widgets/new_proposal_container.dart';
 import 'package:nate/modules/new_proposal/new_proposal_controller.dart';
 import 'package:nate/modules/project_setup/project_setup_controller.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
 
 class ProjectSetupView extends GetView<ProjectSetupController> {
   ProjectSetupView({super.key});
@@ -260,23 +261,26 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                 ),
               ),
               SizedBox(height: Get.height * 0.02),
-              Container(
-                height: Get.height * 0.06,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color(0xff2E3030),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.add, color: Color(0xffEC1B34)),
-                      Text(
-                        'Add',
-                        style: GoogleFonts.roboto(color: Color(0xfffEC1B34)),
-                      ),
-                    ],
+              GestureDetector(
+                onTap: () => Get.toNamed(AppPages.projectinfo),
+                child: Container(
+                  height: Get.height * 0.06,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Color(0xff2E3030),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.add, color: Color(0xffEC1B34)),
+                        Text(
+                          'Add',
+                          style: GoogleFonts.roboto(color: Color(0xfffEC1B34)),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
