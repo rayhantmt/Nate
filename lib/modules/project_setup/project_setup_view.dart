@@ -44,16 +44,27 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: Get.height * 0.03,
+                 Obx(() =>  Container(
+                    height: Get.height * 0.04,
                     width: Get.width * 0.4,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
                       color: Color(0xff000000),
                     ),
-                  ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                           Text('Frame',style: TextStyle(
+                            color: controller.framed.value?Colors.red:Colors.white
+                           ),),
+                           Text('No Frame',style: TextStyle(
+                            color: controller.framed.value?Colors.white:Colors.red
+                           ),)
+                      ],
+                    ),
+                  ),),
                    Container(
-                    height: Get.height * 0.03,
+                    height: Get.height * 0.04,
                     width: Get.width * 0.4,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
