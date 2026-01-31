@@ -212,7 +212,8 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                               ),
                               SizedBox(height: Get.height * 0.02),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: [
                                   NewProposalContainer(
                                     tittle: 'Orange',
@@ -234,14 +235,30 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                       )
                     : Text(''),
               ),
-              //SizedBox(height: Get.height*0.02,),
-              Text('Your note',
-              style: GoogleFonts.roboto(
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: Colors.white
+              Text(
+                'Your note(Optional)',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: Colors.white,
+                ),
               ),
-              )
+              Container(
+                height: Get.height * 0.2,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hint: Text(
+                      'Input more details if you would like to add',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
