@@ -178,7 +178,7 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
               Obx(
                 () => controller.painted.value
                     ? SizedBox(
-                        height: Get.height * 0.4,
+                        height: Get.height * 0.35,
                         child: Container(
                           decoration: BoxDecoration(),
                           child: Column(
@@ -212,6 +212,7 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                               ),
                               SizedBox(height: Get.height * 0.02),
                               Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
                                   NewProposalContainer(
                                     tittle: 'Orange',
@@ -233,6 +234,14 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                       )
                     : Text(''),
               ),
+              //SizedBox(height: Get.height*0.02,),
+              Text('Your note',
+              style: GoogleFonts.roboto(
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+                color: Colors.white
+              ),
+              )
             ],
           ),
         ),
