@@ -78,7 +78,12 @@ class ProjectInfoView extends StatelessWidget {
               ),
               SizedBox(height: Get.height*0.02,),
               ClipRRect(
-                child: Image.file(File(con.pickedimage.value!.path)),
+                borderRadius: BorderRadiusGeometry.circular(18),
+                child: Image.file(File(con.pickedimage.value!.path),
+                height: Get.height*0.3,
+                width: double.infinity,
+                fit: BoxFit.cover,
+                ),
               )
 
             ],
