@@ -84,8 +84,18 @@ class ProjectInfoView extends StatelessWidget {
                 width: double.infinity,
                 fit: BoxFit.cover,
                 ),
-              )
-
+              ),
+Row(
+  children: [
+    Text('Length - 9.5 in',
+    style: GoogleFonts.openSans( 
+      fontWeight: FontWeight.w400,
+      fontSize: 16,
+      color: Colors.white
+    ),
+    )
+  ],
+)
             ],
           ),
         ),
