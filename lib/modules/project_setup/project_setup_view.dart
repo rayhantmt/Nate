@@ -251,6 +251,9 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: TextFormField(
+                  style: TextStyle(
+                    color: Colors.white
+                  ),
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hint: Text(

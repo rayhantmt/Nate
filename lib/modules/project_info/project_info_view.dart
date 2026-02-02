@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nate/utils/app_images.dart';
 
 class ProjectInfoView extends StatelessWidget {
@@ -9,12 +10,17 @@ class ProjectInfoView extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppImages.primarycolor,
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Row(children: [
-
-            ],)
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              Row(children: [
+              Image.asset(AppImages.backicon,
+              height: Get.height*0.07,
+              )
+              ],)
+            ],
+          ),
         ),
       ),
     );
