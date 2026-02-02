@@ -42,6 +42,36 @@ class ProjectInfoView extends StatelessWidget {
                 fontSize: 14,
                 color: Colors.white
               ),
+              ),
+              SizedBox(
+                height: Get.height*0.02,
+              ),
+              Container(
+                height: Get.height*0.05,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 1,
+                    color: Color(0xffFFFFFF).withOpacity(0.8)
+                  ),
+                  borderRadius: BorderRadius.circular(12)
+                ),
+                child: TextFormField(
+                  style: TextStyle(
+                    color: Colors.white
+                  ),
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hint: Center(
+                      child: Text('120 Baker Street, Los angeles CA 90012',
+                      style: GoogleFonts.roboto( 
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white
+                      ),
+                      ),
+                    )
+                  ),
+                ),
               )
 
             ],
