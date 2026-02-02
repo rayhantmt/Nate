@@ -10,7 +10,7 @@ class ProjectInfoView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final con=Get.find<NewProposalController>();
+    final con = Get.find<NewProposalController>();
     return Scaffold(
       backgroundColor: AppImages.primarycolor,
       body: SingleChildScrollView(
@@ -19,83 +19,94 @@ class ProjectInfoView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: Get.height*0.06,
+              SizedBox(height: Get.height * 0.06),
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () => Get.back(),
+                    child: Image.asset(
+                      AppImages.backicon,
+                      height: Get.height * 0.07,
+                    ),
+                  ),
+                  SizedBox(width: Get.width * 0.05),
+                  Text(
+                    'Project Info',
+                    style: GoogleFonts.openSans(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
               ),
-              Row(children: [
-              GestureDetector(
-                onTap: () => Get.back(),
-                child: Image.asset(AppImages.backicon,
-                height: Get.height*0.07,
+              SizedBox(height: Get.height * 0.02),
+              Text(
+                'Shipping Address',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: Colors.white,
                 ),
               ),
-              SizedBox(width: Get.width*0.05,),
-              Text('Project Info',
-              style: GoogleFonts.openSans( 
-                fontWeight: FontWeight.w700,
-                fontSize: 20,
-                color: Colors.white
-              ),
-              )
-              ],),
-              SizedBox(height: Get.height*0.02,),
-              Text('Shipping Address',
-              style: GoogleFonts.roboto( 
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: Colors.white
-              ),
-              ),
-              SizedBox(
-                height: Get.height*0.02,
-              ),
+              SizedBox(height: Get.height * 0.02),
               Container(
-                height: Get.height*0.05,
+                height: Get.height * 0.05,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 1,
-                    color: Color(0xffFFFFFF).withOpacity(0.8)
+                    color: Color(0xffFFFFFF).withOpacity(0.8),
                   ),
-                  borderRadius: BorderRadius.circular(12)
+                  borderRadius: BorderRadius.circular(12),
                 ),
                 child: TextFormField(
-                  style: TextStyle(
-                    color: Colors.white
-                  ),
+                  style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hint: Center(
-                      child: Text('120 Baker Street, Los angeles CA 90012',
-                      style: GoogleFonts.roboto( 
-                        fontWeight: FontWeight.w400,
-                        color: Colors.white
+                      child: Text(
+                        '120 Baker Street, Los angeles CA 90012',
+                        style: GoogleFonts.roboto(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                        ),
                       ),
-                      ),
-                    )
+                    ),
                   ),
                 ),
               ),
-              SizedBox(height: Get.height*0.02,),
+              SizedBox(height: Get.height * 0.02),
               ClipRRect(
                 borderRadius: BorderRadiusGeometry.circular(18),
-                child: Image.file(File(con.pickedimage.value!.path),
-                height: Get.height*0.3,
-                width: double.infinity,
-                fit: BoxFit.cover,
+                child: Image.file(
+                  File(con.pickedimage.value!.path),
+                  height: Get.height * 0.3,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
                 ),
               ),
-Row(
-  children: [
-    Text('Length - 9.5 in',
-    style: GoogleFonts.openSans( 
-      fontWeight: FontWeight.w400,
-      fontSize: 16,
-      color: Colors.white
-    ),
-    )
-  ],
-)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Length - 9.5 in',
+                    style: GoogleFonts.openSans(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                   Text(
+                    'width - 9.5 in',
+                    style: GoogleFonts.openSans(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
