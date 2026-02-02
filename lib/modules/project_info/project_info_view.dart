@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/modules/new_proposal/new_proposal_controller.dart';
 import 'package:nate/utils/app_images.dart';
 
@@ -107,6 +108,8 @@ class ProjectInfoView extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: Get.height*0.1,),
+              CommonButton(tittle: 'Submit')
             ],
           ),
         ),
