@@ -80,47 +80,74 @@ class HomeView extends GetView<HomeController> {
                           color: Colors.white.withOpacity(0.05),
                         ),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Text(
-                                    controller.homedata[index].address,
-                                    style: GoogleFonts.openSans(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 20,
-                                      color: Colors.white,
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 20),
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      controller.homedata[index].address,
+                                      style: GoogleFonts.openSans(
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Container(
-                                  height: Get.height * 0.02,
-                                  width: Get.width * 0.32,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(17),
-                                    color: Color(0xffF97400).withOpacity(0.1),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.circle,
-                                        color: Color(0xffF97400),
-                                        size: 10,
-                                      ),
-                                      Text(
-                                        controller.homedata[index].progress
-                                            ? 'In Progress'
-                                            : 'Delivered',
-                                        style: GoogleFonts.robotoMono(
+                                  Container(
+                                    height: Get.height * 0.02,
+                                    width: Get.width * 0.32,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(17),
+                                      color: Color(0xffF97400).withOpacity(0.1),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.circle,
                                           color: Color(0xffF97400),
+                                          size: 10,
                                         ),
-                                      ),
-                                    ],
+                                        Text(
+                                          controller.homedata[index].progress
+                                              ? 'In Progress'
+                                              : 'Delivered',
+                                          style: GoogleFonts.robotoMono(
+                                            color: Color(0xffF97400),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    
                                   ),
-                                ),
-                                SizedBox(width: Get.width * 0.01),
-                              ],
+                                  SizedBox(width: Get.width * 0.01),
+                                ],
+                              ),
                             ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 20),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text('Estimate : ${controller.homedata[index].price.toString()}',
+                                  style: GoogleFonts.roboto( 
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 16,
+                                    color: Colors.white
+                                  ),
+                                  ),
+                                  Text('Vents : ${controller.homedata[index].vents.toString()}',
+                                  style: GoogleFonts.roboto( 
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 16,
+                                    color: Colors.white
+                                  ),
+                                  )
+                                ],
+                              ),
+                            )
                           ],
                         ),
                       ),
