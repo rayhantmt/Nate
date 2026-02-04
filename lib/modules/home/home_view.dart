@@ -83,7 +83,7 @@ class HomeView extends GetView<HomeController> {
                           children: [
                             Expanded(
                               child: Text(
-                              controller.homedata[index].address,
+                                controller.homedata[index].address,
                                 style: GoogleFonts.openSans(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 20,
@@ -92,13 +92,24 @@ class HomeView extends GetView<HomeController> {
                               ),
                             ),
                             Container(
-                              height: Get.height*0.02,
-                              width: Get.width*0.25,
+                              height: Get.height * 0.02,
+                              width: Get.width * 0.25,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(17),
                                 color: Color(0xffF97400).withOpacity(0.1),
                               ),
-                            )
+                              child: Row(
+                                children: [
+                                  Icon(Icons.circle, color: Color(0xffF97400)),
+                                  Text(
+                                    controller.homedata[index].progress
+                                        ? 'In Progress'
+                                        : 'Delivered',
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(width: Get.width * 0.01),
                           ],
                         ),
                       ],
