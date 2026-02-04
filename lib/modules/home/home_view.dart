@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/utils/app_images.dart';
 
 class HomeView extends StatelessWidget {
@@ -33,6 +34,35 @@ class HomeView extends StatelessWidget {
               ),
               
               Image.asset(AppImages.colourfuldivider),
+              SizedBox(height: Get.height*0.02,),
+               Container(
+                height: Get.height*0.06,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  color: Colors.white.withOpacity(0.1),
+                ),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.only(left: 10),
+                    hint: Row(
+                      children: [
+                        Icon(Icons.search,
+                        color: Colors.white,
+                        ),
+                        Text('Search for project',
+                        style: GoogleFonts.roboto( 
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                          color: Colors.white.withOpacity(0.7)
+                        ),
+                        ),
+                      ],
+                    )
+                  ),
+                ),
+               )
             ],
           ),
         )
