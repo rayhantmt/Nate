@@ -65,58 +65,67 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ),
               ),
-              SizedBox(height: Get.height * 0.02),
+        
               Expanded(
                 child: ListView.builder(
                   itemCount: controller.homedata.length,
 
-                  itemBuilder: (context, index) => Container(
-                    height: Get.height * 0.15,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18),
-                      color: Colors.white.withOpacity(0.05),
-                    ),
-                    child: Column(
-                      children: [
-                        Row(
+                  itemBuilder: (context, index) => Column(
+                    children: [
+                      Container(
+                        height: Get.height * 0.15,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          color: Colors.white.withOpacity(0.05),
+                        ),
+                        child: Column(
                           children: [
-                            Expanded(
-                              child: Text(
-                                controller.homedata[index].address,
-                                style: GoogleFonts.openSans(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              height: Get.height * 0.02,
-                              width: Get.width * 0.32,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(17),
-                                color: Color(0xffF97400).withOpacity(0.1),
-                              ),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.circle, color: Color(0xffF97400),size: 10,),
-                                  Text(
-                                    controller.homedata[index].progress
-                                        ? 'In Progress'
-                                        : 'Delivered',
-                                        style: GoogleFonts.robotoMono( 
-                                          color: Color(0xffF97400)
-                                        ),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    controller.homedata[index].address,
+                                    style: GoogleFonts.openSans(
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                    ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Container(
+                                  height: Get.height * 0.02,
+                                  width: Get.width * 0.32,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(17),
+                                    color: Color(0xffF97400).withOpacity(0.1),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.circle,
+                                        color: Color(0xffF97400),
+                                        size: 10,
+                                      ),
+                                      Text(
+                                        controller.homedata[index].progress
+                                            ? 'In Progress'
+                                            : 'Delivered',
+                                        style: GoogleFonts.robotoMono(
+                                          color: Color(0xffF97400),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(width: Get.width * 0.01),
+                              ],
                             ),
-                            SizedBox(width: Get.width * 0.01),
                           ],
                         ),
-                      ],
-                    ),
+                      ),
+                      SizedBox(height: Get.height*0.02,)
+                    ],
                   ),
                 ),
               ),
