@@ -74,7 +74,22 @@ class HomeView extends GetView<HomeController> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
-                    color: Colors.white.withOpacity(0.05),
+                    color:Colors.white.withOpacity(0.05)
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text(controller.homedata.iterator.current.address,
+                          style: GoogleFonts.openSans( 
+                            fontWeight: FontWeight.w700,
+                            fontSize: 20,
+                            color: Colors.white
+                          ),
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
               ),
