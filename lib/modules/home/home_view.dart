@@ -66,31 +66,43 @@ class HomeView extends GetView<HomeController> {
                 ),
               ),
               SizedBox(height: Get.height * 0.02),
-              ListView.builder(
-                itemCount: controller.homedata.length,
+              Expanded(
+                child: ListView.builder(
+                  itemCount: controller.homedata.length,
 
-                itemBuilder: (context, index) => Container(
-                  height: Get.height * 0.2,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(18),
-                    color: Colors.white.withOpacity(0.05),
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            controller.homedata.iterator.current.address,
-                            style: GoogleFonts.openSans(
-                              fontWeight: FontWeight.w700,
-                              fontSize: 20,
-                              color: Colors.white,
+                  itemBuilder: (context, index) => Container(
+                    height: Get.height * 0.2,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
+                      color: Colors.white.withOpacity(0.05),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                              controller.homedata[index].address,
+                                style: GoogleFonts.openSans(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                            Container(
+                              height: Get.height*0.02,
+                              width: Get.width*0.25,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(17),
+                                color: Color(0xffF97400).withOpacity(0.1),
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
