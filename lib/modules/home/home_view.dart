@@ -65,6 +65,19 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ),
               ),
+              SizedBox(height: Get.height * 0.02),
+              ListView.builder(
+                itemCount: controller.homedata.length,
+
+                itemBuilder: (context, index) => Container(
+                  height: Get.height * 0.2,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    color: Colors.white.withOpacity(0.05),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
