@@ -126,8 +126,16 @@ class QuoteSummaryView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16)
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  
+                  Image.asset(AppImages.downloadlog),
+                  Text('Get PDF Receipt',
+                  style: GoogleFonts.roboto(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 16,
+                    color: Color(0xffEC1B34)
+                  ),
+                  )
                 ],
               ),
             )
