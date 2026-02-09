@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nate/modules/quote_generation/quote_generation_controller.dart';
 import 'package:nate/utils/app_images.dart';
 
-class QuoteGenerationView extends StatelessWidget {
+class QuoteGenerationView extends GetView<QuoteGenerationController> {
   const QuoteGenerationView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    controller.onInit();
     return Scaffold(
       backgroundColor: AppImages.primarycolor,
       body: Stack(
