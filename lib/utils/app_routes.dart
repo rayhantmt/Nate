@@ -23,6 +23,7 @@ import 'package:nate/modules/project_setup/project_setup_binding.dart';
 import 'package:nate/modules/project_setup/project_setup_view.dart';
 import 'package:nate/modules/quote_generation/quote_generation_binding.dart';
 import 'package:nate/modules/quote_generation/quote_generation_view.dart';
+import 'package:nate/modules/quote_summary/quote_summary_view.dart';
 import 'package:nate/modules/reset_password/reset_password_binding.dart';
 import 'package:nate/modules/reset_password/reset_password_view.dart';
 import 'package:nate/modules/settings/setting_view.dart';
@@ -44,6 +45,7 @@ class AppRoutes {
     GetPage(name: AppPages.newproposl, page: () => NewProposalView(),binding: NewProposalBinding()),
     GetPage(name: AppPages.projectinfo, page: () => ProjectInfoView(),binding: ProjectInfoBinding()),
     GetPage(name: AppPages.hoeproj4ectdetails, page: () => HomeProjectDetailsView(),binding: HomeProjectDetailsBinding()),
-    GetPage(name: AppPages.quotegeneration, page: () => QuoteGenerationView(),binding: QuoteGenerationBinding())
+    GetPage(name: AppPages.quotegeneration, page: () => QuoteGenerationView(),binding: QuoteGenerationBinding()),
+    GetPage(name: AppPages.quotesummary, page: () => QuoteSummaryView(),)
   ];
 }
