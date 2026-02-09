@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class AppImages {
-  //colors
+//colors
   static const Color primarycolor=Color(0xff17191A);
 //images
   static const String splash='assets/splash.png';
