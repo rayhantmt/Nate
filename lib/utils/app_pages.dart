@@ -17,5 +17,6 @@ class AppPages {
   static const String hoeproj4ectdetails='/homeprojectdtaildfs';
   static const String quotegeneration='/quotegeneration';
   static const String quotesummary='/quotesummary';
+  static const String savedprojects='/savedprojects';
   
 }

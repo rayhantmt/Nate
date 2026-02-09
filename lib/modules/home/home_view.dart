@@ -66,7 +66,7 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ),
               ),
-        
+
               Expanded(
                 child: ListView.builder(
                   itemCount: controller.homedata.length,
@@ -86,7 +86,9 @@ class HomeView extends GetView<HomeController> {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                ),
                                 child: Row(
                                   children: [
                                     Expanded(
@@ -104,7 +106,9 @@ class HomeView extends GetView<HomeController> {
                                       width: Get.width * 0.32,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(17),
-                                        color: Color(0xffF97400).withOpacity(0.1),
+                                        color: Color(
+                                          0xffF97400,
+                                        ).withOpacity(0.1),
                                       ),
                                       child: Row(
                                         children: [
@@ -123,39 +127,43 @@ class HomeView extends GetView<HomeController> {
                                           ),
                                         ],
                                       ),
-                                      
                                     ),
                                     SizedBox(width: Get.width * 0.01),
                                   ],
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                ),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text('Estimate : ${controller.homedata[index].price.toString()}',
-                                    style: GoogleFonts.roboto( 
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Colors.white
+                                    Text(
+                                      'Estimate : ${controller.homedata[index].price.toString()}',
+                                      style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 14,
+                                        color: Colors.white,
+                                      ),
                                     ),
+                                    Text(
+                                      'Vents : ${controller.homedata[index].vents.toString()}',
+                                      style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 14,
+                                        color: Colors.white,
+                                      ),
                                     ),
-                                    Text('Vents : ${controller.homedata[index].vents.toString()}',
-                                    style: GoogleFonts.roboto( 
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Colors.white
-                                    ),
-                                    )
                                   ],
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
                       ),
-                      SizedBox(height: Get.height*0.015,)
+                      SizedBox(height: Get.height * 0.015),
                     ],
                   ),
                 ),
