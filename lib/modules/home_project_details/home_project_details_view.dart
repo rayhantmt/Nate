@@ -11,20 +11,36 @@ class HomeProjectDetailsView extends StatelessWidget {
     return Scaffold(
       backgroundColor:AppImages.primarycolor,
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Image.asset(AppImages.backicon,
-            height: Get.height*0.04,
-            ),
-            SizedBox(width: Get.width*0.04,),
-            Text('Project Details',
-            style: GoogleFonts.openSans(
-              fontWeight: FontWeight.w700,
-              fontSize: 20,
-              color: Colors.white
-            ),
-            )
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              SizedBox(height: Get.height*0.06,),
+              Row(
+                children: [
+                  Image.asset(AppImages.backicon,
+                  height: Get.height*0.06,
+                  ),SizedBox(width: Get.width*0.04,),
+              Text('Project Details',
+              style: GoogleFonts.openSans(
+                fontWeight: FontWeight.w700,
+                fontSize: 20,
+                color: Colors.white
+              ),
+              ),
+                ],
+              ),
+              
+              SizedBox(height: Get.height*0.05,),
+              Text('Shipping Address',
+              style: GoogleFonts.roboto( 
+                fontWeight: FontWeight.w600,
+                fontSize: 16,
+                color: Colors.white
+              ),
+              )
+            ],
+          ),
         ),
       ),
     );
