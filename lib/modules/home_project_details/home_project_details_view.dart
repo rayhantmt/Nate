@@ -31,7 +31,7 @@ class HomeProjectDetailsView extends StatelessWidget {
                 ],
               ),
               
-              SizedBox(height: Get.height*0.05,),
+              SizedBox(height: Get.height*0.02,),
               Text('Shipping Address',
               style: GoogleFonts.roboto( 
                 fontWeight: FontWeight.w600,
