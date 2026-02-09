@@ -65,6 +65,44 @@ class QuoteSummaryView extends StatelessWidget {
                         ),
                         ),
                       ],
+                    ),
+                    Divider(
+                      indent: 1,
+                      endIndent: 1,
+                      height: 1,
+                      color: Colors.white.withOpacity(0.2),
+                    ),
+                    Text('(1) 5" × 8" rectangle vents with frames, matte white finish',
+                    style: GoogleFonts.roboto( 
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                      color: Colors.white
+                    ),
+                    ),
+                      Divider(
+                      indent: 1,
+                      endIndent: 1,
+                      height: 1,
+                      color: Colors.white.withOpacity(0.2),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [ 
+                        Text('Total',
+                        style: GoogleFonts.roboto( 
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          color: Colors.white
+                        ),
+                        ),
+                        Text("\$78.54",
+                        style: GoogleFonts.roboto( 
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          color: Colors.white
+                        ),
+                        )
+                      ],
                     )
                   ],
                 ),
