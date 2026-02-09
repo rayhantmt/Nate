@@ -14,5 +14,6 @@ class AppPages {
   static const String newproposl='/newproposal';
   static const String projectinfo='/projectinfo';
   static const String home='/home';
+  static const String hoeproj4ectdetails='/homeprojectdtaildfs';
   
 }

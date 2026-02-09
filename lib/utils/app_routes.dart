@@ -1,3 +1,4 @@
+import 'package:get/get_navigation/src/routes/get_transition_mixin.dart';
 import 'package:get/route_manager.dart';
 import 'package:nate/modules/change_password/change_password_binding.dart';
 import 'package:nate/modules/change_password/change_password_view.dart';
@@ -8,6 +9,8 @@ import 'package:nate/modules/email_verify_page/email_verify_page.dart';
 import 'package:nate/modules/forgot_password/forgor_password_view.dart';
 import 'package:nate/modules/home/home_binding.dart';
 import 'package:nate/modules/home/home_view.dart';
+import 'package:nate/modules/home_project_details/home_project_binding.dart';
+import 'package:nate/modules/home_project_details/home_project_details_view.dart';
 import 'package:nate/modules/login/log_in_binding.dart';
 import 'package:nate/modules/login/log_in_view.dart';
 import 'package:nate/modules/main_screen/main_screen.dart';
@@ -41,6 +44,6 @@ class AppRoutes {
     GetPage(name: AppPages.projectsetup, page: () => ProjectSetupView(),binding: ProjectSetupBinding()),
     GetPage(name: AppPages.newproposl, page: () => NewProposalView(),binding: NewProposalBinding()),
     GetPage(name: AppPages.projectinfo, page: () => ProjectInfoView(),binding: ProjectInfoBinding()),
-    GetPage(name: AppPages.home, page: () => HomeView(),binding: HomeBinding())
+    GetPage(name: AppPages.hoeproj4ectdetails, page: () => HomeProjectDetailsView(),binding: HomeProjectDetailsBinding())
   ];
 }
