@@ -30,5 +30,6 @@ class AppImages {
   static const String plusbottomicon='assets/plus_bottom_icon.png';
   static const String homebottomicon='assets/home_bottom_icon.png';
   static const String quotegeneration='assets/quote_generation.png';
+  static const String downloadlog='assets/download_logo.png';
   
 }
