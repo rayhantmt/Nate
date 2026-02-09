@@ -1,6 +1,7 @@
 import 'package:get/route_manager.dart';
 import 'package:nate/modules/change_password/change_password_binding.dart';
 import 'package:nate/modules/change_password/change_password_view.dart';
+import 'package:nate/modules/contact_us/contact_us.dart';
 import 'package:nate/modules/edit_profile/edit_profile_binding.dart';
 import 'package:nate/modules/edit_profile/edit_profile_view.dart';
 import 'package:nate/modules/email_verify_page/email_verify_binding.dart';
@@ -49,6 +50,7 @@ class AppRoutes {
     GetPage(name: AppPages.hoeproj4ectdetails, page: () => HomeProjectDetailsView(),binding: HomeProjectDetailsBinding()),
     GetPage(name: AppPages.quotegeneration, page: () => QuoteGenerationView(),binding: QuoteGenerationBinding()),
     GetPage(name: AppPages.quotesummary, page: () => QuoteSummaryView(),),
-    GetPage(name: AppPages.savedprojects, page: () => SavedProjectsView(),binding: SavedProjectsBinding())
+    GetPage(name: AppPages.savedprojects, page: () => SavedProjectsView(),binding: SavedProjectsBinding()),
+    GetPage(name: AppPages.contactus, page: () => ContactUs(),)
   ];
 }

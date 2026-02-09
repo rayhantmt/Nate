@@ -89,9 +89,12 @@ class ProfileView extends StatelessWidget {
                   image: AppImages.historyicon,
                 ),
                 SizedBox(height: Get.height * 0.015),
-                ProfileContainer(
-                  tittle: 'Contact Us',
-                  image: AppImages.contacticon,
+                GestureDetector(
+                  onTap: () => Get.toNamed(AppPages.contactus),
+                  child: ProfileContainer(
+                    tittle: 'Contact Us',
+                    image: AppImages.contacticon,
+                  ),
                 ),
                 SizedBox(height: Get.height * 0.015),
                 ProfileContainer(
