@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/modules/new_proposal/new_proposal_controller.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
 
 class ProjectInfoView extends StatelessWidget {
   const ProjectInfoView({super.key});
@@ -109,7 +110,9 @@ class ProjectInfoView extends StatelessWidget {
                 ],
               ),
               SizedBox(height: Get.height*0.1,),
-              CommonButton(tittle: 'Submit')
+              GestureDetector(
+                onTap: () => Get.toNamed(AppPages.quotegeneration),
+                child: CommonButton(tittle: 'Submit'))
             ],
           ),
         ),

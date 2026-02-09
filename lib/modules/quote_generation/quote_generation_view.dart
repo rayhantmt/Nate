@@ -7,6 +7,7 @@ class QuoteGenerationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppImages.primarycolor,
       body: Column(
         children: [
           Image.asset(AppImages.homelogo)
