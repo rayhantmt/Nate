@@ -46,6 +46,16 @@ class HomeProjectDetailsView extends StatelessWidget {
                 fontSize: 14,
                 color: Colors.white
               ),
+              ),
+              SizedBox(
+                height: Get.height*0.05,
+              ),
+              Text('Order Details',
+              style: GoogleFonts.roboto( 
+                fontWeight: FontWeight.w600,
+                fontSize: 16,
+                color: Colors.white
+              ),
               )
             ],
           ),
