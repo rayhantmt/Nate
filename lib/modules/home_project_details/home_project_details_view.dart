@@ -14,6 +14,7 @@ class HomeProjectDetailsView extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: Get.height*0.06,),
               Row(
@@ -36,6 +37,13 @@ class HomeProjectDetailsView extends StatelessWidget {
               style: GoogleFonts.roboto( 
                 fontWeight: FontWeight.w600,
                 fontSize: 16,
+                color: Colors.white
+              ),
+              ),
+              Text('120 Baker Street, Los Angeles, CA 90012',
+              style: GoogleFonts.roboto( 
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
                 color: Colors.white
               ),
               )
