@@ -1,4 +1,3 @@
-import 'package:get/get_navigation/src/routes/get_transition_mixin.dart';
 import 'package:get/route_manager.dart';
 import 'package:nate/modules/change_password/change_password_binding.dart';
 import 'package:nate/modules/change_password/change_password_view.dart';
@@ -7,8 +6,6 @@ import 'package:nate/modules/edit_profile/edit_profile_view.dart';
 import 'package:nate/modules/email_verify_page/email_verify_binding.dart';
 import 'package:nate/modules/email_verify_page/email_verify_page.dart';
 import 'package:nate/modules/forgot_password/forgor_password_view.dart';
-import 'package:nate/modules/home/home_binding.dart';
-import 'package:nate/modules/home/home_view.dart';
 import 'package:nate/modules/home_project_details/home_project_binding.dart';
 import 'package:nate/modules/home_project_details/home_project_details_view.dart';
 import 'package:nate/modules/login/log_in_binding.dart';
