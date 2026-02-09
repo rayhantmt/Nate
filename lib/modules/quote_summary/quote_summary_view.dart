@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/utils/app_images.dart';
 
 class QuoteSummaryView extends StatelessWidget {
@@ -111,6 +112,25 @@ class QuoteSummaryView extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: Get.height*0.2,),
+            CommonButton(tittle: 'Make Payment'),
+            SizedBox(height: Get.height*0.02,),
+            Container(
+              height: Get.height*0.05,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 1,
+                  color: Color(0xff2E3030)
+                ),
+                borderRadius: BorderRadius.circular(16)
+              ),
+              child: Row(
+                children: [
+                  
+                ],
+              ),
+            )
           ],
         ),
       ),
