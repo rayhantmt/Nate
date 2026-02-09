@@ -20,7 +20,9 @@ class SavedProjectsView extends StatelessWidget {
             SizedBox(height: Get.height * 0.07),
             Row(
               children: [
-                Image.asset(AppImages.backicon, height: Get.height * 0.06),
+                GestureDetector(
+                  onTap: () => Get.back(),
+                  child: Image.asset(AppImages.backicon, height: Get.height * 0.06)),
                 SizedBox(width: Get.width * 0.05),
                 Text(
                   'Saved Projects',
@@ -39,7 +41,7 @@ class SavedProjectsView extends StatelessWidget {
                 itemBuilder: (context, index) => Column(
                   children: [
                     GestureDetector(
-                      onTap: () => Get.toNamed(AppPages.hoeproj4ectdetails),
+                      onTap: () => Get.toNamed(AppPages.quotesummary),
                       child: Container(
                         height: Get.height * 0.17,
                         width: double.infinity,
