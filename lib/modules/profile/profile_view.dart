@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/common_widgets/profile_container.dart';
@@ -75,9 +76,12 @@ class ProfileView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: Get.height * 0.015),
-                ProfileContainer(
-                  tittle: 'Saved Projects',
-                  image: AppImages.savedporjects,
+                GestureDetector(
+                  onTap: () => Get.toNamed(AppPages.savedprojects),
+                  child: ProfileContainer(
+                    tittle: 'Saved Projects',
+                    image: AppImages.savedporjects,
+                  ),
                 ),
                 SizedBox(height: Get.height * 0.015),
                 ProfileContainer(
