@@ -18,5 +18,6 @@ class AppPages {
   static const String quotegeneration='/quotegeneration';
   static const String quotesummary='/quotesummary';
   static const String savedprojects='/savedprojects';
+  static const String contactus='/contactus';
   
 }
