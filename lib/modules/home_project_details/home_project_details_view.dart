@@ -9,57 +9,77 @@ class HomeProjectDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:AppImages.primarycolor,
+      backgroundColor: AppImages.primarycolor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: Get.height*0.06,),
+              SizedBox(height: Get.height * 0.06),
               Row(
                 children: [
                   GestureDetector(
                     onTap: () => Get.back(),
-                    child: Image.asset(AppImages.backicon,
-                    height: Get.height*0.06,
+                    child: Image.asset(
+                      AppImages.backicon,
+                      height: Get.height * 0.06,
                     ),
-                  ),SizedBox(width: Get.width*0.04,),
-              Text('Project Details',
-              style: GoogleFonts.openSans(
-                fontWeight: FontWeight.w700,
-                fontSize: 20,
-                color: Colors.white
-              ),
-              ),
+                  ),
+                  SizedBox(width: Get.width * 0.04),
+                  Text(
+                    'Project Details',
+                    style: GoogleFonts.openSans(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
                 ],
               ),
-              
-              SizedBox(height: Get.height*0.02,),
-              Text('Shipping Address',
-              style: GoogleFonts.roboto( 
-                fontWeight: FontWeight.w600,
-                fontSize: 16,
-                color: Colors.white
+
+              SizedBox(height: Get.height * 0.02),
+              Text(
+                'Shipping Address',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
               ),
+              Text(
+                '120 Baker Street, Los Angeles, CA 90012',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 14,
+                  color: Colors.white,
+                ),
               ),
-              Text('120 Baker Street, Los Angeles, CA 90012',
-              style: GoogleFonts.roboto( 
-                fontWeight: FontWeight.w400,
-                fontSize: 14,
-                color: Colors.white
+              SizedBox(height: Get.height * 0.05),
+              Text(
+                'Order Details',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
               ),
+              Container(
+                height: Get.height * 0.3,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(18),
+                ),
+                child: Column(
+                  children: [
+                    Image.asset(
+                      AppImages.vent,
+                      height: Get.height * 0.25,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(
-                height: Get.height*0.05,
-              ),
-              Text('Order Details',
-              style: GoogleFonts.roboto( 
-                fontWeight: FontWeight.w600,
-                fontSize: 16,
-                color: Colors.white
-              ),
-              )
             ],
           ),
         ),
