@@ -76,7 +76,7 @@ class HomeView extends GetView<HomeController> {
                       GestureDetector(
                         onTap: () => Get.toNamed(AppPages.hoeproj4ectdetails),
                         child: Container(
-                          height: Get.height * 0.17,
+                          height: Get.height * 0.19,
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(18),
