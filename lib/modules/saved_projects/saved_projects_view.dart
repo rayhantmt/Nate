@@ -43,7 +43,7 @@ class SavedProjectsView extends StatelessWidget {
                     GestureDetector(
                       onTap: () => Get.toNamed(AppPages.quotesummary),
                       child: Container(
-                        height: Get.height * 0.17,
+                        height: Get.height * 0.19,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(18),
