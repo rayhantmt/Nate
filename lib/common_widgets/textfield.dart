@@ -27,7 +27,7 @@ final Widget? suffix;
             borderRadius: BorderRadius.circular(12)
           ),
           child: Padding(
-            padding: const EdgeInsets.only(top: 15,left: 15,right: 15),
+            padding: const EdgeInsets.only(left: 15,right: 15),
             child: TextFormField(
             style: GoogleFonts.roboto( color: Colors.white),
             cursorColor: Colors.white,
