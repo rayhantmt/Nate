@@ -68,6 +68,7 @@ class HomeProjectDetailsView extends StatelessWidget {
                 height: Get.height * 0.3,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(18),
+                  color: Colors.white.withOpacity(0.05)
                 ),
                 child: Column(
                   children: [
@@ -77,6 +78,25 @@ class HomeProjectDetailsView extends StatelessWidget {
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text('Length - 9.5 in',
+                        style: GoogleFonts.roboto( 
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                          color: Colors.white
+                        ),
+                        ),
+                        Text('Width - 9.5 in',
+                        style: GoogleFonts.roboto( 
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                          color: Colors.white
+                        ),
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),
