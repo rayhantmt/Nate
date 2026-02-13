@@ -30,6 +30,8 @@ import 'package:nate/modules/reset_password/reset_password_view.dart';
 import 'package:nate/modules/saved_projects/saved_projects_binding.dart';
 import 'package:nate/modules/saved_projects/saved_projects_view.dart';
 import 'package:nate/modules/settings/setting_view.dart';
+import 'package:nate/modules/shopping_cart/shopping_cart_binding.dart';
+import 'package:nate/modules/shopping_cart/shopping_cart_view.dart';
 import 'package:nate/utils/app_pages.dart';
 
 class AppRoutes {
@@ -51,6 +53,7 @@ class AppRoutes {
     GetPage(name: AppPages.quotegeneration, page: () => QuoteGenerationView(),binding: QuoteGenerationBinding()),
     GetPage(name: AppPages.quotesummary, page: () => QuoteSummaryView(),),
     GetPage(name: AppPages.savedprojects, page: () => SavedProjectsView(),binding: SavedProjectsBinding()),
-    GetPage(name: AppPages.contactus, page: () => ContactUs(),)
+    GetPage(name: AppPages.contactus, page: () => ContactUs(),),
+    GetPage(name: AppPages.shoppingcart, page: () => ShoppingCartView(),binding: ShoppingCartBinding()),
   ];
 }
