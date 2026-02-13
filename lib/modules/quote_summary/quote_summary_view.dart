@@ -113,7 +113,7 @@ class QuoteSummaryView extends StatelessWidget {
               ),
             ),
             SizedBox(height: Get.height*0.2,),
-            CommonButton(tittle: 'Make Payment'),
+            CommonButton(tittle: 'Add to shopping cart'),
             SizedBox(height: Get.height*0.02,),
             Container(
               height: Get.height*0.05,
