@@ -10,27 +10,32 @@ class ShoppingCartView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppImages.primarycolor,
-      body: Column(
-        children: [
-          SizedBox(
-            height: Get.height*0.06,
-          ),
-          Row(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
             children: [
-              Image.asset(AppImages.backicon,
-              height: Get.height*0.06,
+              SizedBox(
+                height: Get.height*0.06,
               ),
-              SizedBox(width: Get.width*0.05,),
-              Text('Shopping Cart',
-              style: GoogleFonts.openSans( 
-                fontWeight: FontWeight.w700,
-                fontSize: 20,
-                color: Colors.white
-              ),
-              ),
+              Row(
+                children: [
+                  Image.asset(AppImages.backicon,
+                  height: Get.height*0.06,
+                  ),
+                  SizedBox(width: Get.width*0.05,),
+                  Text('Shopping Cart',
+                  style: GoogleFonts.openSans( 
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                    color: Colors.white
+                  ),
+                  ),
+                ],
+              )
             ],
-          )
-        ],
+          ),
+        ),
       ),
     );
   }
