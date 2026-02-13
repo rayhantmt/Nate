@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/utils/app_images.dart';
+import 'package:nate/utils/app_pages.dart';
 
 class QuoteSummaryView extends StatelessWidget {
   const QuoteSummaryView({super.key});
@@ -112,33 +113,34 @@ class QuoteSummaryView extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: Get.height*0.2,),
-            CommonButton(tittle: 'Add to shopping cart'),
-            SizedBox(height: Get.height*0.02,),
+            SizedBox(height: Get.height * 0.2),
+            GestureDetector(
+              onTap: () => Get.toNamed(AppPages.shoppingcart),
+              child: CommonButton(tittle: 'Add to shopping cart'),
+            ),
+            SizedBox(height: Get.height * 0.02),
             Container(
-              height: Get.height*0.05,
+              height: Get.height * 0.05,
               width: double.infinity,
               decoration: BoxDecoration(
-                border: Border.all(
-                  width: 1,
-                  color: Color(0xff2E3030)
-                ),
-                borderRadius: BorderRadius.circular(16)
+                border: Border.all(width: 1, color: Color(0xff2E3030)),
+                borderRadius: BorderRadius.circular(16),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(AppImages.downloadlog),
-                  Text('Get PDF Receipt',
-                  style: GoogleFonts.roboto(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: Color(0xffEC1B34)
+                  Text(
+                    'Get PDF Receipt',
+                    style: GoogleFonts.roboto(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: Color(0xffEC1B34),
+                    ),
                   ),
-                  )
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
