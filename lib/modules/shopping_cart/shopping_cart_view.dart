@@ -1,46 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/modules/shopping_cart/shopping_cart_controller.dart';
 import 'package:nate/utils/app_images.dart';
 
-class ShoppingCartView extends StatelessWidget {
+class ShoppingCartView extends GetView<ShoppingCartController> {
   const ShoppingCartView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppImages.primarycolor,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              SizedBox(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            SizedBox(
+              height: Get.height*0.06,
+            ),
+            Row(
+              children: [
+                Image.asset(AppImages.backicon,
                 height: Get.height*0.06,
-              ),
-              Row(
+                ),
+                SizedBox(width: Get.width*0.05,),
+                Text('Shopping Cart',
+                style: GoogleFonts.openSans( 
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                  color: Colors.white
+                ),
+                ),
+              ],
+            ),
+            SizedBox(height: Get.height*0.03,),
+            Expanded(
+              child: ListView.builder(
+                shrinkWrap: true,
+              itemCount: controller.shoppingcartdata.length,
+              itemBuilder: (context, index) => Row(
                 children: [
-                  Image.asset(AppImages.backicon,
-                  height: Get.height*0.06,
-                  ),
-                  SizedBox(width: Get.width*0.05,),
-                  Text('Shopping Cart',
+                  Text(controller.shoppingcartdata[index].vent,
                   style: GoogleFonts.openSans( 
                     fontWeight: FontWeight.w700,
-                    fontSize: 20,
+                    fontSize: 12,
                     color: Colors.white
                   ),
-                  ),
+                  )
                 ],
-              ),
-              SizedBox(height: Get.height*0.03,),
-              ListView.builder(itemBuilder: (context, index) => Row(
-                children: [
-                  
-                ],
-              ),)
-            ],
-          ),
+              ),),
+            )
+          ],
         ),
       ),
     );
