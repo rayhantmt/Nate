@@ -32,7 +32,13 @@ class ShoppingCartView extends StatelessWidget {
                   ),
                   ),
                 ],
-              )
+              ),
+              SizedBox(height: Get.height*0.03,),
+              ListView.builder(itemBuilder: (context, index) => Row(
+                children: [
+                  
+                ],
+              ),)
             ],
           ),
         ),
