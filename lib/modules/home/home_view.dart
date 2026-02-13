@@ -141,7 +141,7 @@ class HomeView extends GetView<HomeController> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      'Estimate : ${controller.homedata[index].price.toString()}',
+                                      'Estimate :\$${controller.homedata[index].price.toString()}',
                                       style: GoogleFonts.roboto(
                                         fontWeight: FontWeight.w400,
                                         fontSize: 14,
@@ -149,7 +149,7 @@ class HomeView extends GetView<HomeController> {
                                       ),
                                     ),
                                     Text(
-                                      'Vents : ${controller.homedata[index].vents.toString()}',
+                                      'Vents : ${controller.homedata[index].vents.toInt()}',
                                       style: GoogleFonts.roboto(
                                         fontWeight: FontWeight.w400,
                                         fontSize: 14,
