@@ -15,41 +15,40 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            SizedBox(
-              height: Get.height*0.06,
-            ),
+            SizedBox(height: Get.height * 0.06),
             Row(
               children: [
-                Image.asset(AppImages.backicon,
-                height: Get.height*0.06,
-                ),
-                SizedBox(width: Get.width*0.05,),
-                Text('Shopping Cart',
-                style: GoogleFonts.openSans( 
-                  fontWeight: FontWeight.w700,
-                  fontSize: 20,
-                  color: Colors.white
-                ),
+                Image.asset(AppImages.backicon, height: Get.height * 0.06),
+                SizedBox(width: Get.width * 0.05),
+                Text(
+                  'Shopping Cart',
+                  style: GoogleFonts.openSans(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
                 ),
               ],
             ),
-            SizedBox(height: Get.height*0.03,),
+            SizedBox(height: Get.height * 0.03),
             Expanded(
               child: ListView.builder(
                 shrinkWrap: true,
-              itemCount: controller.shoppingcartdata.length,
-              itemBuilder: (context, index) => Row(
-                children: [
-                  Text(controller.shoppingcartdata[index].vent,
-                  style: GoogleFonts.openSans( 
-                    fontWeight: FontWeight.w700,
-                    fontSize: 12,
-                    color: Colors.white
-                  ),
-                  )
-                ],
-              ),),
-            )
+                itemCount: controller.shoppingcartdata.length,
+                itemBuilder: (context, index) => Row(
+                  children: [
+                    Text(
+                      controller.shoppingcartdata[index].vent,
+                      style: GoogleFonts.openSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
