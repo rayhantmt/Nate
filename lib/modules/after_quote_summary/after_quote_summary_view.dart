@@ -12,25 +12,28 @@ class AfterQuoteSummaryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppImages.primarycolor,
-      body: Column(
-        children: [
-          SizedBox(height: Get.height*0.15,),
-          Text('Added to shopping cart',
-          style: GoogleFonts.openSans( 
-            fontWeight: FontWeight.w700,
-            fontSize: 20,
-            color: Colors.white
-          ),
-          ),
-          SizedBox(height: Get.height*0.05,),
-          GestureDetector(
-            onTap: () => Get.toNamed(AppPages.mainscreen),
-            child: CommonButton(tittle: 'Create another project')),
-          SizedBox(height: Get.height*0.05,),
-          GestureDetector(
-            onTap: () => Get.toNamed(AppPages.shoppingcart),
-            child: CommonButton(tittle: 'View shopping cart')),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            SizedBox(height: Get.height*0.15,),
+            Text('Added to shopping cart',
+            style: GoogleFonts.openSans( 
+              fontWeight: FontWeight.w700,
+              fontSize: 20,
+              color: Colors.white
+            ),
+            ),
+            SizedBox(height: Get.height*0.05,),
+            GestureDetector(
+              onTap: () => Get.toNamed(AppPages.mainscreen),
+              child: CommonButton(tittle: 'Create another project')),
+            SizedBox(height: Get.height*0.05,),
+            GestureDetector(
+              onTap: () => Get.toNamed(AppPages.shoppingcart),
+              child: CommonButton(tittle: 'View shopping cart')),
+          ],
+        ),
       ),
     );
   }
