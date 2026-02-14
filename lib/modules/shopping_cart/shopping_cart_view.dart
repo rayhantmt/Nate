@@ -60,7 +60,8 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
               ),
             ),
             SizedBox(height: Get.height*0.05,),
-            CommonButton(tittle: 'Make payment')
+            CommonButton(tittle: 'Make payment'),
+            SizedBox(height: Get.height*0.1,)
 
           ],
         ),
