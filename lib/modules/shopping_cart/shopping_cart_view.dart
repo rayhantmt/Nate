@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nate/common_widgets/common_button.dart';
 import 'package:nate/modules/shopping_cart/shopping_cart_controller.dart';
 import 'package:nate/utils/app_images.dart';
 
@@ -59,6 +60,9 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
                 ),
               ),
             ),
+            SizedBox(height: Get.height*0.05,),
+            CommonButton(tittle: 'Make payment')
+
           ],
         ),
       ),
