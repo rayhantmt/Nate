@@ -19,7 +19,9 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
             SizedBox(height: Get.height * 0.06),
             Row(
               children: [
-                Image.asset(AppImages.backicon, height: Get.height * 0.06),
+                GestureDetector(
+                  onTap: () => Get.back(),
+                  child: Image.asset(AppImages.backicon, height: Get.height * 0.06)),
                 SizedBox(width: Get.width * 0.05),
                 Text(
                   'Shopping Cart',

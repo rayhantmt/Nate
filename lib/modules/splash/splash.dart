@@ -15,7 +15,7 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
-    Future.delayed(Duration(milliseconds: 1500),() => Get.offAllNamed(AppPages.shoppingcart),);
+    Future.delayed(Duration(milliseconds: 1500),() => Get.offAllNamed(AppPages.login),);
   
     super.initState();
   }

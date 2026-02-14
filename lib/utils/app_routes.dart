@@ -1,4 +1,6 @@
 import 'package:get/route_manager.dart';
+import 'package:nate/modules/after_quote_summary/after_quote_summary_bindings.dart';
+import 'package:nate/modules/after_quote_summary/after_quote_summary_view.dart';
 import 'package:nate/modules/change_password/change_password_binding.dart';
 import 'package:nate/modules/change_password/change_password_view.dart';
 import 'package:nate/modules/contact_us/contact_us.dart';
@@ -55,5 +57,6 @@ class AppRoutes {
     GetPage(name: AppPages.savedprojects, page: () => SavedProjectsView(),binding: SavedProjectsBinding()),
     GetPage(name: AppPages.contactus, page: () => ContactUs(),),
     GetPage(name: AppPages.shoppingcart, page: () => ShoppingCartView(),binding: ShoppingCartBinding()),
+    GetPage(name: AppPages.afterquotesummary, page: () => AfterQuoteSummaryView(),binding: AfterQuoteSummaryBindings()),
   ];
 }

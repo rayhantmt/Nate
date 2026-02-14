@@ -20,4 +20,5 @@ class AppPages {
   static const String savedprojects='/savedprojects';
   static const String contactus='/contactus';
   static const String shoppingcart='/shoppingcart';
+  static const String afterquotesummary='/afterquotesummary';
 }

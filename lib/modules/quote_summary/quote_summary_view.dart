@@ -115,7 +115,7 @@ class QuoteSummaryView extends StatelessWidget {
             ),
             SizedBox(height: Get.height * 0.2),
             GestureDetector(
-              onTap: () => Get.toNamed(AppPages.shoppingcart),
+              onTap: () => Get.toNamed(AppPages.afterquotesummary),
               child: CommonButton(tittle: 'Add to shopping cart'),
             ),
             SizedBox(height: Get.height * 0.02),
