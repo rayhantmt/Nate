@@ -37,13 +37,20 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
                 itemCount: controller.shoppingcartdata.length,
                 itemBuilder: (context, index) => Row(
                   children: [
-                    Text(
-                      controller.shoppingcartdata[index].vent,
-                      style: GoogleFonts.openSans(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),
+                    Row(
+                      children: [
+                        Text(
+                          controller.shoppingcartdata[index].vent,
+                          style: GoogleFonts.openSans(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Obx(() => Checkbox(value: controller.shoppingcartdata[index].selected.value, onChanged: (value) {
+                          controller.shoppingcartdata[index].selected.value =value!;
+                        },),)
+                      ],
                     ),
                   ],
                 ),

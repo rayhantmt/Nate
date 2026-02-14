@@ -1,6 +1,8 @@
+import 'package:get/get.dart';
+
 class ShoppingCartModel {
   final String vent;
   final String price;
-
-  ShoppingCartModel({required this.vent, required this.price});
+ RxBool selected;
+  ShoppingCartModel({required this.vent, required this.price,required this.selected});
 }
