@@ -16,14 +16,23 @@ class AfterQuoteSummaryView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            SizedBox(height: Get.height*0.15,),
-            Text('Added to shopping cart',
+            SizedBox(height: Get.height*0.07,),
+            Row(
+              children: [
+                Image.asset(AppImages.backicon,
+                height: Get.height*0.04,
+                ),
+                SizedBox(width: Get.width*0.05,),
+                Text('Added to shopping cart',
             style: GoogleFonts.openSans( 
               fontWeight: FontWeight.w700,
               fontSize: 20,
               color: Colors.white
             ),
             ),
+              ],
+            ),
+            
             SizedBox(height: Get.height*0.05,),
             GestureDetector(
               onTap: () => Get.toNamed(AppPages.mainscreen),
