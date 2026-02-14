@@ -29,7 +29,7 @@ class AfterQuoteSummaryView extends StatelessWidget {
           SizedBox(height: Get.height*0.05,),
           GestureDetector(
             onTap: () => Get.toNamed(AppPages.shoppingcart),
-            child: CommonButton(tittle: 'Make Payment')),
+            child: CommonButton(tittle: 'View shopping cart')),
         ],
       ),
     );
