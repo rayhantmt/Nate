@@ -39,25 +39,22 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
                 shrinkWrap: true,
                 itemCount: controller.shoppingcartdata.length,
                 itemBuilder: (context, index) => Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                          controller.shoppingcartdata[index].vent,
-                          style: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 20,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Obx(() => Checkbox(
-                          activeColor: Colors.red,
-                          value: controller.shoppingcartdata[index].selected.value, onChanged: (value) {
-                          controller.shoppingcartdata[index].selected.value =value!;
-                          print(controller.shoppingcartdata[index].selected.value.toString());
-                        },),)
-                      ],
+                    Text(
+                      controller.shoppingcartdata[index].vent,
+                      style: GoogleFonts.openSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
                     ),
+                    Obx(() => Checkbox(
+                      activeColor: Colors.red,
+                      value: controller.shoppingcartdata[index].selected.value, onChanged: (value) {
+                      controller.shoppingcartdata[index].selected.value =value!;
+                      print(controller.shoppingcartdata[index].selected.value.toString());
+                    },),)
                   ],
                 ),
               ),
