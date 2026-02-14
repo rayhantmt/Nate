@@ -10,8 +10,5 @@ class ShoppingCartController extends GetxController {
     ShoppingCartModel(vent: 'Vent 1', price: '88', selected: false.obs),
     ShoppingCartModel(vent: 'Vent 1', price: '88', selected: false.obs),
   ];
-  RxBool checked = false.obs;
-  void checkbox(f) {
-    checked.value = f;
-  }
+  
 }

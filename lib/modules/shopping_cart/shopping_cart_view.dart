@@ -47,8 +47,11 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
                             color: Colors.white,
                           ),
                         ),
-                        Obx(() => Checkbox(value: controller.shoppingcartdata[index].selected.value, onChanged: (value) {
+                        Obx(() => Checkbox(
+                          activeColor: Colors.red,
+                          value: controller.shoppingcartdata[index].selected.value, onChanged: (value) {
                           controller.shoppingcartdata[index].selected.value =value!;
+                          print(controller.shoppingcartdata[index].selected.value.toString());
                         },),)
                       ],
                     ),
