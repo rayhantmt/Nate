@@ -19,8 +19,11 @@ class AfterQuoteSummaryView extends StatelessWidget {
             SizedBox(height: Get.height*0.07,),
             Row(
               children: [
-                Image.asset(AppImages.backicon,
-                height: Get.height*0.04,
+                GestureDetector(
+                  onTap: () => Get.back(),
+                  child: Image.asset(AppImages.backicon,
+                  height: Get.height*0.04,
+                  ),
                 ),
                 SizedBox(width: Get.width*0.05,),
                 Text('Added to shopping cart',
