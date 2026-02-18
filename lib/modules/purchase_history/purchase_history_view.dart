@@ -20,7 +20,11 @@ class PurchaseHistoryView extends GetView<PurchaseHistoryController> {
               children: [
                 GestureDetector(
                   onTap: () => Get.back(),
-                  child: Image.asset(AppImages.backicon, height: Get.height * 0.06)),
+                  child: Image.asset(
+                    AppImages.backicon,
+                    height: Get.height * 0.06,
+                  ),
+                ),
                 SizedBox(width: Get.width * 0.05),
                 Text(
                   'History',
@@ -39,47 +43,72 @@ class PurchaseHistoryView extends GetView<PurchaseHistoryController> {
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.only(bottom: 10),
                   child: Container(
-                    height: Get.height * 0.15,
+                    height: Get.height * 0.1,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       color: Colors.white.withOpacity(0.05),
                     ),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(controller.purchasehistroy[index].tittle,
-                            style: GoogleFonts.openSans( 
-                              fontWeight: FontWeight.w700,
-                              fontSize: 20,
-                              color: Colors.white
-                            ),
+                            Text(
+                              controller.purchasehistroy[index].tittle,
+                              style: GoogleFonts.openSans(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 20,
+                                color: Colors.white,
+                              ),
                             ),
                             Container(
-                              height: Get.height*0.02,
-                              width: Get.width*0.18,
+                              height: Get.height * 0.02,
+                              width: Get.width * 0.18,
                               decoration: BoxDecoration(
                                 color: Color(0xff4BB54B).withOpacity(0.1),
-                                borderRadius: BorderRadius.circular(16)
+                                borderRadius: BorderRadius.circular(16),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   CircleAvatar(
                                     radius: 5,
                                     backgroundColor: Color(0xff4BB54B),
                                   ),
-                                  Text('Completed',
-                                  style: GoogleFonts.robotoMono( 
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 10,
-                                    color: Color(0xff4BB54B)
+                                  Text(
+                                    'Completed',
+                                    style: GoogleFonts.robotoMono(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 10,
+                                      color: Color(0xff4BB54B),
+                                    ),
                                   ),
-                                  )
                                 ],
                               ),
-                            )
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Price: \$${controller.purchasehistroy[index].price}',
+                              style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              'Vents: ${controller.purchasehistroy[index].vents}',
+                              style: GoogleFonts.roboto(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
                           ],
                         ),
                       ],
