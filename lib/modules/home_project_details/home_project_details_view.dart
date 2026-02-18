@@ -68,35 +68,82 @@ class HomeProjectDetailsView extends StatelessWidget {
                 height: Get.height * 0.3,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(18),
-                  color: Colors.white.withOpacity(0.05)
+                  color: Colors.white.withOpacity(0.05),
                 ),
                 child: Column(
                   children: [
-                    Image.asset(
-                      AppImages.vent,
-                      height: Get.height * 0.25,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
+                    Stack(
+                      children: [
+                        Image.asset(
+                          AppImages.vent,
+                          height: Get.height * 0.25,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                        Positioned(
+                          top: Get.height * 0.01,
+                          left: Get.width * 0.02,
+                          child: Container(
+                            height: Get.height * 0.03,
+                            width: Get.width * 0.2,
+                            decoration: BoxDecoration(
+                              color: Color(0xff2E3030),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Frame',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 13,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: Get.height * 0.01,
+                          left: Get.width * 0.3,
+                          child: Container(
+                            height: Get.height * 0.03,
+                            width: Get.width * 0.2,
+                            decoration: BoxDecoration(
+                              color: Color(0xff2E3030),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Center(child: Text('Painted',
+                             style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 13,
+                                  color: Colors.white,
+                                ),
+                            )),
+                          ),
+                        ),
+                      ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text('Length - 9.5 in',
-                        style: GoogleFonts.roboto( 
-                          fontWeight: FontWeight.w400,
-                          fontSize: 16,
-                          color: Colors.white
+                        Text(
+                          'Length - 9.5 in',
+                          style: GoogleFonts.roboto(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
                         ),
-                        ),
-                        Text('Width - 9.5 in',
-                        style: GoogleFonts.roboto( 
-                          fontWeight: FontWeight.w400,
-                          fontSize: 16,
-                          color: Colors.white
-                        ),
+                        Text(
+                          'Width - 9.5 in',
+                          style: GoogleFonts.roboto(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
