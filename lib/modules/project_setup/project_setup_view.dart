@@ -135,6 +135,27 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                 ),
               ),
               SizedBox(height: Get.height * 0.02),
+               Text(
+                'Project Tittle',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: Colors.white,
+                ),
+              ),
+              Container(
+                height: Get.height * 0.05,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(width: 1, color: Color(0xffFFFFFFCC)),
+                ),
+                child: TextFormField(
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(border: InputBorder.none),
+                ),
+              ),
+              SizedBox(height: Get.height * 0.02),
               Text(
                 'Length',
                 style: GoogleFonts.roboto(
