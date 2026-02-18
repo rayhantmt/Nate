@@ -32,5 +32,6 @@ class AppImages {
   static const String quotegeneration='assets/quote_generation.png';
   static const String downloadlog='assets/download_logo.png';
   static const String vent='assets/vent.png';
+  static const String logout='assets/log_out.png';
   
 }
