@@ -24,6 +24,8 @@ import 'package:nate/modules/project_info/project_info_binding.dart';
 import 'package:nate/modules/project_info/project_info_view.dart';
 import 'package:nate/modules/project_setup/project_setup_binding.dart';
 import 'package:nate/modules/project_setup/project_setup_view.dart';
+import 'package:nate/modules/purchase_history/purchase_history_binding.dart';
+import 'package:nate/modules/purchase_history/purchase_history_view.dart';
 import 'package:nate/modules/quote_generation/quote_generation_binding.dart';
 import 'package:nate/modules/quote_generation/quote_generation_view.dart';
 import 'package:nate/modules/quote_summary/quote_summary_view.dart';
@@ -58,5 +60,6 @@ class AppRoutes {
     GetPage(name: AppPages.contactus, page: () => ContactUs(),),
     GetPage(name: AppPages.shoppingcart, page: () => ShoppingCartView(),binding: ShoppingCartBinding()),
     GetPage(name: AppPages.afterquotesummary, page: () => AfterQuoteSummaryView(),binding: AfterQuoteSummaryBindings()),
+    GetPage(name: AppPages.purchasehistory, page: () => PurchaseHistoryView(),binding: PurchaseHistoryBinding())
   ];
 }
