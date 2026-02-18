@@ -47,6 +47,7 @@ class PurchaseHistoryView extends GetView<PurchaseHistoryController> {
                     child: Column(
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(controller.purchasehistroy[index].tittle,
                             style: GoogleFonts.openSans( 
@@ -55,6 +56,30 @@ class PurchaseHistoryView extends GetView<PurchaseHistoryController> {
                               color: Colors.white
                             ),
                             ),
+                            Container(
+                              height: Get.height*0.02,
+                              width: Get.width*0.18,
+                              decoration: BoxDecoration(
+                                color: Color(0xff4BB54B).withOpacity(0.1),
+                                borderRadius: BorderRadius.circular(16)
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  CircleAvatar(
+                                    radius: 5,
+                                    backgroundColor: Color(0xff4BB54B),
+                                  ),
+                                  Text('Completed',
+                                  style: GoogleFonts.robotoMono( 
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 10,
+                                    color: Color(0xff4BB54B)
+                                  ),
+                                  )
+                                ],
+                              ),
+                            )
                           ],
                         ),
                       ],
