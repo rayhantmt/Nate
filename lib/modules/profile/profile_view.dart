@@ -91,9 +91,12 @@ class ProfileView extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: Get.height * 0.015),
-                ProfileContainer(
-                  tittle: 'Purchase History',
-                  image: AppImages.historyicon,
+                GestureDetector(
+                  onTap: () => Get.toNamed(AppPages.purchasehistory),
+                  child: ProfileContainer(
+                    tittle: 'Purchase History',
+                    image: AppImages.historyicon,
+                  ),
                 ),
                 SizedBox(height: Get.height * 0.015),
                 GestureDetector(
