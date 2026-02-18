@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nate/utils/app_images.dart';
 
 class PurchaseHistoryView extends StatelessWidget {
@@ -8,6 +9,15 @@ class PurchaseHistoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppImages.primarycolor,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            SizedBox(height: Get.height*0.07,),
+            
+          ],
+        ),
+      ),
     );
   }
 }
