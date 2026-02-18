@@ -308,6 +308,7 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                   ),
                 ),
               ),
+              SizedBox(height: Get.height*0.08,)
             ],
           ),
         ),

@@ -43,6 +43,13 @@ class ProjectInfoView extends StatelessWidget {
                 ],
               ),
               SizedBox(height: Get.height * 0.02),
+              Text('Project Tittle: Kitchen Vent',
+              style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 20,
+                color: Colors.white
+              ),
+              ),
               Text(
                 'Shipping Address',
                 style: GoogleFonts.roboto(
