@@ -40,6 +40,15 @@ class HomeProjectDetailsView extends StatelessWidget {
 
               SizedBox(height: Get.height * 0.02),
               Text(
+                'Project Tittle:Kitchen Vent',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: Get.height * 0.03),
+              Text(
                 'Shipping Address',
                 style: GoogleFonts.roboto(
                   fontWeight: FontWeight.w600,
@@ -55,7 +64,8 @@ class HomeProjectDetailsView extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: Get.height * 0.05),
+              SizedBox(height: Get.height * 0.03),
+
               Text(
                 'Order Details',
                 style: GoogleFonts.roboto(
@@ -64,8 +74,44 @@ class HomeProjectDetailsView extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
+              Text(
+                '(1) 5" × 8" rectangle vents with frames, matte white finish',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+              Divider(
+                height: 1,
+                indent: 1,
+                endIndent: 1,
+                color: Colors.white.withOpacity(0.2),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Total',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13,
+                      color: Colors.white,
+                    ),
+                  ),
+                    Text(
+                    '\$78.23',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: Get.height * 0.03),
               Container(
-                height: Get.height * 0.3,
+                height: Get.height * 0.5,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(18),
                   color: Colors.white.withOpacity(0.05),
@@ -112,13 +158,16 @@ class HomeProjectDetailsView extends StatelessWidget {
                               color: Color(0xff2E3030),
                               borderRadius: BorderRadius.circular(100),
                             ),
-                            child: Center(child: Text('Painted',
-                             style: TextStyle(
+                            child: Center(
+                              child: Text(
+                                'Painted',
+                                style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 13,
                                   color: Colors.white,
                                 ),
-                            )),
+                              ),
+                            ),
                           ),
                         ),
                       ],
@@ -144,6 +193,26 @@ class HomeProjectDetailsView extends StatelessWidget {
                         ),
                       ],
                     ),
+                    Row(
+                      children: [
+                        Text('Your note',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                          color: Colors.white
+                        ),
+                        ),
+                      ],
+                    ),
+                    Text('LikLorem ipsum dolor sit amet consectetur. Ultrices id feugiat venenatis habitant mattis viverra elementum purus volutpat. Lacus eu molestie pulvinar rhoncus integer proin elementum. Pretium sit fringilla massa tristique aenean commodo leo. Aliquet viverra amet sit porta elementum et pellentesque posuere. Ullamcorper viverra tortor lobortis viverra auctor ....',
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 7,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                      color: Colors.white
+                    ),
+                    )
                   ],
                 ),
               ),
