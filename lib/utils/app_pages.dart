@@ -1,4 +1,3 @@
-
 class AppPages {
   static const String login='/login';
   static const String forgotpassword='/forgotpassword';
@@ -21,4 +20,5 @@ class AppPages {
   static const String contactus='/contactus';
   static const String shoppingcart='/shoppingcart';
   static const String afterquotesummary='/afterquotesummary';
+  static const String purchasehistory='/purchasehistory';
 }
