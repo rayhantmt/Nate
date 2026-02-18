@@ -14,7 +14,13 @@ class PurchaseHistoryView extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: Get.height*0.07,),
-            
+            Row(
+              children: [
+                Image.asset(AppImages.backicon,
+                height: Get.height*0.06,
+                )
+              ],
+            )
           ],
         ),
       ),
