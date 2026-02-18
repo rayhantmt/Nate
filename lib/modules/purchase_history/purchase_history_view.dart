@@ -42,7 +42,21 @@ class PurchaseHistoryView extends GetView<PurchaseHistoryController> {
                       borderRadius: BorderRadius.circular(18),
                       color: Colors.white.withOpacity(0.05),
                     ),
-                    child: Text(controller.purchasehistroy[index].tittle),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text(controller.purchasehistroy[index].tittle,
+                            style: GoogleFonts.openSans( 
+                              fontWeight: FontWeight.w700,
+                              fontSize: 20,
+                              color: Colors.white
+                            ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
