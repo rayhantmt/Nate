@@ -125,28 +125,28 @@ class QuoteSummaryView extends StatelessWidget {
                 child: CommonButton(tittle: 'Add to saved projects'),
               ),
               SizedBox(height: Get.height * 0.02),
-              Container(
-                height: Get.height * 0.05,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: Color(0xff2E3030)),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(AppImages.downloadlog),
-                    Text(
-                      'Get PDF Receipt',
-                      style: GoogleFonts.roboto(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                        color: Color(0xffEC1B34),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // Container(
+              //   height: Get.height * 0.05,
+              //   width: double.infinity,
+              //   decoration: BoxDecoration(
+              //     border: Border.all(width: 1, color: Color(0xff2E3030)),
+              //     borderRadius: BorderRadius.circular(16),
+              //   ),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       Image.asset(AppImages.downloadlog),
+              //       Text(
+              //         'Get PDF Receipt',
+              //         style: GoogleFonts.roboto(
+              //           fontWeight: FontWeight.w600,
+              //           fontSize: 16,
+              //           color: Color(0xffEC1B34),
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),
