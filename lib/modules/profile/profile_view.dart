@@ -117,7 +117,6 @@ class ProfileView extends StatelessWidget {
                     tittle: 'Terms & condition',
                     image: AppImages.terms,
                   ),
-                  //SizedBox(height: Get.height*0.05,),
                   Image.asset(AppImages.logout)
                 ],
               ),
