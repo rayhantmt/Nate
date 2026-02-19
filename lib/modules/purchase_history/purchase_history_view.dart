@@ -64,7 +64,7 @@ class PurchaseHistoryView extends GetView<PurchaseHistoryController> {
                             ),
                             Container(
                               height: Get.height * 0.02,
-                              width: Get.width * 0.18,
+                              width: Get.width * 0.19,
                               decoration: BoxDecoration(
                                 color: Color(0xff4BB54B).withOpacity(0.1),
                                 borderRadius: BorderRadius.circular(16),
