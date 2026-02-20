@@ -49,7 +49,7 @@ class QuoteSummaryView extends StatelessWidget {
                       Image.asset(AppImages.homelogo, height: Get.height * 0.1),
                       SizedBox(height: Get.height * 0.05),
                       Text(
-                        '120 Baker Street, Los Angeles, CA 90012',
+                        'Project Tittle: Kitchen Vent',
                         style: GoogleFonts.roboto(
                           fontWeight: FontWeight.w600,
                           fontSize: 16,
@@ -120,10 +120,10 @@ class QuoteSummaryView extends StatelessWidget {
                 child: CommonButton(tittle: 'Add to shopping cart'),
               ),
               SizedBox(height: Get.height * 0.02),
-              GestureDetector(
-                onTap: () => Get.toNamed(AppPages.savedprojects),
-                child: CommonButton(tittle: 'Add to saved projects'),
-              ),
+              // GestureDetector(
+              //   onTap: () => Get.toNamed(AppPages.savedprojects),
+              //   child: CommonButton(tittle: 'Add to saved projects'),
+              // ),
               SizedBox(height: Get.height * 0.02),
               // Container(
               //   height: Get.height * 0.05,

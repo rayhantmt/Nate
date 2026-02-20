@@ -4,37 +4,37 @@ import 'package:nate/modules/home/home_model.dart';
 class HomeController extends GetxController {
   var homedata = <HomeModel>[
     HomeModel(
-      address: '120 Baker Street, Los Angeles, CA 90012',
+      address: 'House 1',
       price: 185,
       vents: 3,
-      progress: true,
+      progress: false,
     ),
     HomeModel(
-      address: '120 Baker Street, Los Angeles, CA 90012',
+      address: 'House 3',
       price: 111,
       vents: 5,
       progress: true,
     ),
     HomeModel(
-      address: '120 Baker Street, Los Angeles, CA 90012',
+      address: 'House 6',
       price: 185,
       vents: 3,
       progress: true,
     ),
     HomeModel(
-      address: '120 Baker Street, Los Angeles, CA 90012',
+      address: 'House 8',
       price: 111,
       vents: 5,
       progress: true,
     ),
     HomeModel(
-      address: '120 Baker Street, Los Angeles, CA 90012',
+      address: 'Kitchen Vent',
       price: 185,
       vents: 3,
       progress: true,
     ),
     HomeModel(
-      address: '120 Baker Street, Los Angeles, CA 90012',
+      address: 'Kitchen Vent',
       price: 111,
       vents: 5,
       progress: true,

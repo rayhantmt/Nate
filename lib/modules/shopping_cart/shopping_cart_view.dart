@@ -41,12 +41,24 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
                 itemBuilder: (context, index) => Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text(
-                      controller.shoppingcartdata[index].vent,
-                      style: GoogleFonts.openSans(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 20,
-                        color: Colors.white,
+                    Container(
+                      height: Get.height*0.3,
+                     // width: double.infinity,
+                      child: Column(
+                        children: [
+                          Text(
+                            controller.shoppingcartdata[index].vent,
+                            style: GoogleFonts.openSans(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 20,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Image.asset(controller.shoppingcartdata[index].image,
+                          height: Get.height*0.2,
+                          fit: BoxFit.cover,
+                          )
+                        ],
                       ),
                     ),
                     Obx(() => Checkbox(

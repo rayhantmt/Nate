@@ -119,7 +119,7 @@ class HomeView extends GetView<HomeController> {
                                           ),
                                           Text(
                                             controller.homedata[index].progress
-                                                ? 'In Progress'
+                                                ? 'Pending'
                                                 : 'Delivered',
                                             style: GoogleFonts.robotoMono(
                                               color: Color(0xffF97400),

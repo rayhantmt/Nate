@@ -106,7 +106,7 @@ class SavedProjectsView extends StatelessWidget {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Estimate : ${scontorller.homedata[index].price.toString()}',
+                                    'Estimate : \$${scontorller.homedata[index].price}',
                                     style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 14,
@@ -114,7 +114,7 @@ class SavedProjectsView extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    'Vents : ${scontorller.homedata[index].vents.toString()}',
+                                    'Vents : ${scontorller.homedata[index].vents.toInt()}',
                                     style: GoogleFonts.roboto(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 14,
