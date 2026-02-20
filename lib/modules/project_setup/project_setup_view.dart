@@ -35,7 +35,7 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
                   ),
                   SizedBox(width: Get.width * 0.05),
                   Text(
-                    'Project Setup',
+                    'Vent Setup',
                     style: GoogleFonts.openSans(
                       fontWeight: FontWeight.w700,
                       fontSize: 20,
@@ -136,7 +136,7 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
               ),
               SizedBox(height: Get.height * 0.02),
                Text(
-                'Project Tittle',
+                'Title',
                 style: GoogleFonts.roboto(
                   fontWeight: FontWeight.w600,
                   fontSize: 14,
@@ -178,7 +178,7 @@ class ProjectSetupView extends GetView<ProjectSetupController> {
               ),
               SizedBox(height: Get.height * 0.02),
               Text(
-                'width',
+                'Width',
                 style: GoogleFonts.roboto(
                   fontWeight: FontWeight.w600,
                   fontSize: 14,

@@ -21,7 +21,11 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
               children: [
                 GestureDetector(
                   onTap: () => Get.back(),
-                  child: Image.asset(AppImages.backicon, height: Get.height * 0.06)),
+                  child: Image.asset(
+                    AppImages.backicon,
+                    height: Get.height * 0.06,
+                  ),
+                ),
                 SizedBox(width: Get.width * 0.05),
                 Text(
                   'Shopping Cart',
@@ -39,12 +43,12 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
                 shrinkWrap: true,
                 itemCount: controller.shoppingcartdata.length,
                 itemBuilder: (context, index) => Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      height: Get.height*0.3,
-                     // width: double.infinity,
+                      height: Get.height * 0.35,
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             controller.shoppingcartdata[index].vent,
@@ -54,27 +58,112 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
                               color: Colors.white,
                             ),
                           ),
-                          Image.asset(controller.shoppingcartdata[index].image,
-                          height: Get.height*0.2,
-                          fit: BoxFit.cover,
-                          )
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                'Height: ${controller.shoppingcartdata[index].height}',
+                                style: TextStyle(
+                                  color: Colors.white
+                                ),
+                              ),
+                              SizedBox(width: Get.width*0.05,),
+                              Text(
+                                'Width ${controller.shoppingcartdata[index].width}',
+                                style: TextStyle(
+                                  color: Colors.white
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            width: Get.width*0.5,
+                            child: Text('Order Details ${controller.shoppingcartdata[index].orderDetails}',
+                            style: TextStyle(
+                              color: Colors.white
+                            ),
+                            maxLines: 3,
+                            ),
+                          ),
+                          Stack(
+                            children: [
+                              Image.asset(
+                                controller.shoppingcartdata[index].image,
+                                height: Get.height * 0.2,
+                                width: Get.width*0.6,
+                                fit: BoxFit.cover,
+                              ),
+                              Positioned(
+                          top: Get.height * 0.01,
+                          left: Get.width * 0.02,
+                          child: Container(
+                            height: Get.height * 0.03,
+                            width: Get.width * 0.2,
+                            decoration: BoxDecoration(
+                              color: Color(0xff2E3030),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Frame',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 13,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: Get.height * 0.01,
+                          left: Get.width * 0.3,
+                          child: Container(
+                            height: Get.height * 0.03,
+                            width: Get.width * 0.2,
+                            decoration: BoxDecoration(
+                              color: Color(0xff2E3030),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Painted',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 13,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
-                    Obx(() => Checkbox(
-                      activeColor: Colors.red,
-                      value: controller.shoppingcartdata[index].selected.value, onChanged: (value) {
-                      controller.shoppingcartdata[index].selected.value =value!;
-                      print(controller.shoppingcartdata[index].selected.value.toString());
-                    },),)
+                    Obx(
+                      () => Checkbox(
+                        activeColor: Colors.red,
+                        value:
+                            controller.shoppingcartdata[index].selected.value,
+                        onChanged: (value) {
+                          controller.shoppingcartdata[index].selected.value =
+                              value!;
+                          print(
+                            controller.shoppingcartdata[index].selected.value
+                                .toString(),
+                          );
+                        },
+                      ),
+                    ),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: Get.height*0.05,),
+            SizedBox(height: Get.height * 0.05),
             CommonButton(tittle: 'Make payment'),
-            SizedBox(height: Get.height*0.1,)
-
+            SizedBox(height: Get.height * 0.1),
           ],
         ),
       ),

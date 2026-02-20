@@ -49,7 +49,7 @@ class QuoteSummaryView extends StatelessWidget {
                       Image.asset(AppImages.homelogo, height: Get.height * 0.1),
                       SizedBox(height: Get.height * 0.05),
                       Text(
-                        'Project Tittle: Kitchen Vent',
+                        'Tittle: Kitchen Vent',
                         style: GoogleFonts.roboto(
                           fontWeight: FontWeight.w600,
                           fontSize: 16,

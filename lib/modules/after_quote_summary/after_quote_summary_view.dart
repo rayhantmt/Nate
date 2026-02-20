@@ -39,7 +39,7 @@ class AfterQuoteSummaryView extends StatelessWidget {
             SizedBox(height: Get.height*0.05,),
             GestureDetector(
               onTap: () => Get.toNamed(AppPages.mainscreen),
-              child: CommonButton(tittle: 'Create another project')),
+              child: CommonButton(tittle: 'Capture another vent')),
             SizedBox(height: Get.height*0.05,),
             GestureDetector(
               onTap: () => Get.toNamed(AppPages.shoppingcart),

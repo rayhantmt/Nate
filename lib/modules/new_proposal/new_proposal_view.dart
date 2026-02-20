@@ -22,7 +22,7 @@ class NewProposalView extends GetView<NewProposalController> {
             onTap: () => controller.catpute(),
              child: Column(
                children: [
-                 Text('Create new project',
+                 Text('Capture a vent',
                  style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 22,

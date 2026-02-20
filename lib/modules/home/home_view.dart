@@ -103,29 +103,31 @@ class HomeView extends GetView<HomeController> {
                                     ),
                                     Container(
                                       height: Get.height * 0.04,
-                                      width: Get.width * 0.32,
+                                      width: Get.width * 0.3,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(17),
-                                        color: Color(
+                                        color: controller.homedata[index].progress? Color(
                                           0xffF97400,
-                                        ).withOpacity(0.1),
+                                        ).withOpacity(0.1):Color(0xff4BB54B).withOpacity(0.1),
                                       ),
-                                      child: Row(
-                                        children: [
-                                          Icon(
-                                            Icons.circle,
-                                            color: Color(0xffF97400),
-                                            size: 10,
-                                          ),
-                                          Text(
-                                            controller.homedata[index].progress
-                                                ? 'Pending'
-                                                : 'Delivered',
-                                            style: GoogleFonts.robotoMono(
-                                              color: Color(0xffF97400),
+                                      child: Center(
+                                        child: Row(
+                                          children: [
+                                            Icon(
+                                              Icons.circle,
+                                              color:controller.homedata[index].progress? Color(0xffF97400):Color(0xff4BB54B),
+                                              size: 10,
                                             ),
-                                          ),
-                                        ],
+                                            Text(
+                                              controller.homedata[index].progress
+                                                  ? 'Pending'
+                                                  : 'Delivered',
+                                              style: GoogleFonts.robotoMono(
+                                                color:controller.homedata[index].progress? Color(0xffF97400):Color(0xff4BB54B),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                     SizedBox(width: Get.width * 0.01),
