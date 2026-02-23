@@ -76,13 +76,13 @@ class ProfileView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: Get.height * 0.015),
-                  GestureDetector(
-                    onTap: () => Get.toNamed(AppPages.savedprojects),
-                    child: ProfileContainer(
-                      tittle: 'Saved Projects',
-                      image: AppImages.savedporjects,
-                    ),
-                  ),
+                  // GestureDetector(
+                  //   onTap: () => Get.toNamed(AppPages.savedprojects),
+                  //   child: ProfileContainer(
+                  //     tittle: 'Saved Projects',
+                  //     image: AppImages.savedporjects,
+                  //   ),
+                  // ),
                   SizedBox(height: Get.height * 0.015),
                   GestureDetector(
                     onTap: () => Get.toNamed(AppPages.shoppingcart),

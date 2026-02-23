@@ -40,7 +40,7 @@ class HomeProjectDetailsView extends StatelessWidget {
 
               SizedBox(height: Get.height * 0.02),
               Text(
-                'Project Tittle:Kitchen Vent',
+                'Vent Tittle:Kitchen Vent',
                 style: GoogleFonts.roboto(
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
