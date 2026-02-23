@@ -63,82 +63,86 @@ class ShoppingCartView extends GetView<ShoppingCartController> {
                             children: [
                               Text(
                                 'Height: ${controller.shoppingcartdata[index].height}',
-                                style: TextStyle(
-                                  color: Colors.white
-                                ),
+                                style: TextStyle(color: Colors.white),
                               ),
-                              SizedBox(width: Get.width*0.05,),
+                              SizedBox(width: Get.width * 0.05),
                               Text(
                                 'Width ${controller.shoppingcartdata[index].width}',
-                                style: TextStyle(
-                                  color: Colors.white
-                                ),
+                                style: TextStyle(color: Colors.white),
                               ),
                             ],
                           ),
-                          Container(
-                            width: Get.width*0.5,
-                            child: Text('Order Details ${controller.shoppingcartdata[index].orderDetails}',
-                            style: TextStyle(
-                              color: Colors.white
-                            ),
-                            maxLines: 3,
-                            ),
+                          Text('Price: \$73.44',
+                          style: GoogleFonts.openSans( 
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            color: Colors.white
+                          ),
                           ),
                           Stack(
                             children: [
                               Image.asset(
                                 controller.shoppingcartdata[index].image,
                                 height: Get.height * 0.2,
-                                width: Get.width*0.6,
+                                width: Get.width * 0.6,
                                 fit: BoxFit.cover,
                               ),
                               Positioned(
-                          top: Get.height * 0.01,
-                          left: Get.width * 0.02,
-                          child: Container(
-                            height: Get.height * 0.03,
-                            width: Get.width * 0.2,
-                            decoration: BoxDecoration(
-                              color: Color(0xff2E3030),
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Frame',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 13,
-                                  color: Colors.white,
+                                top: Get.height * 0.01,
+                                left: Get.width * 0.02,
+                                child: Container(
+                                  height: Get.height * 0.03,
+                                  width: Get.width * 0.2,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff2E3030),
+                                    borderRadius: BorderRadius.circular(100),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Frame',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 13,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          top: Get.height * 0.01,
-                          left: Get.width * 0.3,
-                          child: Container(
-                            height: Get.height * 0.03,
-                            width: Get.width * 0.2,
-                            decoration: BoxDecoration(
-                              color: Color(0xff2E3030),
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Painted',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 13,
-                                  color: Colors.white,
+                              Positioned(
+                                top: Get.height * 0.01,
+                                left: Get.width * 0.3,
+                                child: Container(
+                                  height: Get.height * 0.03,
+                                  width: Get.width * 0.2,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff2E3030),
+                                    borderRadius: BorderRadius.circular(100),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      'Painted',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 13,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                        ),
                             ],
                           ),
+
+                          // Container(
+                          //   width: Get.width*0.5,
+                          //   child: Text('Order Details ${controller.shoppingcartdata[index].orderDetails}',
+                          //   style: TextStyle(
+                          //     color: Colors.white
+                          //   ),
+                          //   maxLines: 3,
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),
