@@ -110,24 +110,23 @@ class HomeView extends GetView<HomeController> {
                                           0xffF97400,
                                         ).withOpacity(0.1):Color(0xff4BB54B).withOpacity(0.1),
                                       ),
-                                      child: Center(
-                                        child: Row(
-                                          children: [
-                                            Icon(
-                                              Icons.circle,
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.circle,
+                                            color:controller.homedata[index].progress? Color(0xffF97400):Color(0xff4BB54B),
+                                            size: 10,
+                                          ),
+                                          Text(
+                                            controller.homedata[index].progress
+                                                ? 'Pending'
+                                                : 'Delivered',
+                                            style: GoogleFonts.robotoMono(
                                               color:controller.homedata[index].progress? Color(0xffF97400):Color(0xff4BB54B),
-                                              size: 10,
                                             ),
-                                            Text(
-                                              controller.homedata[index].progress
-                                                  ? 'Pending'
-                                                  : 'Delivered',
-                                              style: GoogleFonts.robotoMono(
-                                                color:controller.homedata[index].progress? Color(0xffF97400):Color(0xff4BB54B),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                     SizedBox(width: Get.width * 0.01),
