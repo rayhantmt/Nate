@@ -119,7 +119,7 @@ class ProjectInfoView extends StatelessWidget {
               SizedBox(height: Get.height*0.1,),
               GestureDetector(
                 onTap: () => Get.toNamed(AppPages.quotegeneration),
-                child: CommonButton(tittle: 'Submit'))
+                child: CommonButton(tittle: 'Generate a quote for this vent'))
             ],
           ),
         ),
